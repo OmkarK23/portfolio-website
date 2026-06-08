@@ -32,9 +32,9 @@ html {
 }
 
 body {
-    background: #EAF4FF;
-    color: #1F2937;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--black);
+    color: var(--text-light);
 }
 
 /* Navbar */
@@ -102,7 +102,7 @@ body {
     justify-content: center;
     padding: 130px 10% 90px;
     text-align: center;
-    background: #DCEEFF;
+    background: var(--black);
     position: relative;
     overflow: hidden;
 }
@@ -232,7 +232,7 @@ h2 {
 /* General Section Styling */
 .section {
     padding: 100px 10%;
-    background: #DCEEFF;
+    background: var(--black);
 }
 
 .section-title {
@@ -255,7 +255,7 @@ h2 {
 
 /* About Section */
 .about {
-    background: #DCEEFF;
+    background: var(--black);
 }
 
 .about-container {

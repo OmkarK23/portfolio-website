@@ -32,9 +32,9 @@ html {
 }
 
 body {
-    background: #EAF4FF;
-    color: #1F2937;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--black);
+    color: var(--text-light);
 }
 
 /* Navbar */
@@ -102,7 +102,7 @@ body {
     justify-content: center;
     padding: 130px 10% 90px;
     text-align: center;
-    background: #DCEEFF;
+    background: var(--black);
     position: relative;
     overflow: hidden;
 }
@@ -232,7 +232,7 @@ h2 {
 /* General Section Styling */
 .section {
     padding: 100px 10%;
-    background: #DCEEFF;
+    background: var(--black);
 }
 
 .section-title {
@@ -255,17 +255,17 @@ h2 {
 
 /* About Section */
 .about {
-    background: #DCEEFF;
+    background: var(--black);
 }
 
 .about-container {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    background: #F9FAFB;
+    background: var(--black-soft);
     padding: 38px;
     border-radius: 18px;
-    border: 1px solid #E5E7EB;
+    border: 1px solid var(--border-dark);
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
 }
 
@@ -629,72 +629,4 @@ footer {
         width: 100%;
         max-width: 260px;
     }
-}
-/* Moving Skills Section */
-.skills {
-    background: #0B1120;
-    overflow: hidden;
-}
-
-.skills-marquee {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    overflow: hidden;
-    margin-top: 30px;
-}
-
-.skills-track {
-    display: flex;
-    gap: 18px;
-    width: max-content;
-    animation: scrollSkills 28s linear infinite;
-}
-
-.skills-track.reverse {
-    animation: scrollSkillsReverse 32s linear infinite;
-}
-
-.skill-pill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-    background: #111827;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: #f9fafb;
-    padding: 12px 20px;
-    border-radius: 999px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.skill-pill:hover {
-    color: #D4AF37;
-    border-color: #D4AF37;
-    transform: translateY(-4px);
-}
-
-@keyframes scrollSkills {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes scrollSkillsReverse {
-    from {
-        transform: translateX(-50%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-.skill-pill img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    flex-shrink: 0;
 }

@@ -818,3 +818,35 @@ footer {
         justify-content: center;
     }
 }
+.hero-tagline {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #CBD5E1;
+    max-width: 760px;
+    margin: 18px auto 28px;
+}
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 26px 0;
+}
+
+.hero-badges span {
+    background: #111827;
+    color: #D4AF37;
+    border: 1px solid rgba(212,175,55,0.35);
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.hero-open {
+    color: #FCA5A5;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+}

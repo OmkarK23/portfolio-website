@@ -819,34 +819,38 @@ footer {
     }
 }
 .hero-tagline {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #CBD5E1;
     max-width: 760px;
-    margin: 18px auto 28px;
+    margin: 22px auto 24px;
+    color: #CBD5E1;
+    font-size: 20px;
+    line-height: 1.7;
 }
 
 .hero-badges {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 14px;
-    margin: 26px 0;
+    flex-wrap: wrap;
+    margin: 22px auto;
+    max-width: 760px;
 }
 
 .hero-badges span {
+    min-width: 220px;
+    text-align: center;
     background: #111827;
     color: #D4AF37;
-    border: 1px solid rgba(212,175,55,0.35);
-    padding: 10px 16px;
+    border: 1px solid rgba(212,175,55,0.45);
+    padding: 12px 18px;
     border-radius: 999px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 15px;
 }
 
 .hero-open {
     color: #FCA5A5;
     font-size: 18px;
-    font-weight: 700;
-    margin-top: 16px;
+    font-weight: 800;
+    margin: 18px 0 30px;
 }

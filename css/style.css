@@ -32,9 +32,9 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--black);
-    color: var(--text-light);
+    background: #EAF4FF;
+    color: #1F2937;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* Navbar */
@@ -102,7 +102,7 @@ body {
     justify-content: center;
     padding: 130px 10% 90px;
     text-align: center;
-    background: var(--black);
+    background: #DCEEFF;
     position: relative;
     overflow: hidden;
 }
@@ -232,7 +232,7 @@ h2 {
 /* General Section Styling */
 .section {
     padding: 100px 10%;
-    background: var(--black);
+    background: #DCEEFF;
 }
 
 .section-title {
@@ -255,17 +255,17 @@ h2 {
 
 /* About Section */
 .about {
-    background: var(--black);
+    background: #DCEEFF;
 }
 
 .about-container {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    background: var(--black-soft);
+    background: #F9FAFB;
     padding: 38px;
     border-radius: 18px;
-    border: 1px solid var(--border-dark);
+    border: 1px solid #E5E7EB;
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.28);
 }
 

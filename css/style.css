@@ -854,3 +854,31 @@ footer {
     font-weight: 800;
     margin: 18px 0 30px;
 }
+.company-link {
+    display: inline-block;
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.company-link:hover {
+    color: #ffffff;
+}
+
+.experience-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #D4AF37;
+    color: #0B1120;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.experience-btn:hover {
+    transform: translateY(-2px);
+}

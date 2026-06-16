@@ -497,7 +497,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
-..project-btn {
+.project-btn {
     display: flex;
     align-items: center;
     justify-content: center;

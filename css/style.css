@@ -934,11 +934,27 @@ footer {
 }
 
 .project-tags span {
-    background: rgba(212, 175, 55, 0.12);
-    color: #D4AF37;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    padding: 7px 12px;
+    background: #D4AF37;
+    color: #0B1120;
+    border: 1px solid #D4AF37;
+
+    padding: 8px 14px;
+
     border-radius: 999px;
+
     font-size: 13px;
     font-weight: 700;
+
+    transition: all 0.3s ease;
+
+    cursor: default;
+}
+
+.project-tags span:hover {
+    background: #FACC15;
+    border-color: #FACC15;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(212,175,55,0.35);
 }

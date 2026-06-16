@@ -389,20 +389,41 @@ h2 {
 }
 
 .project-metrics {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 18px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
 }
 
 .project-metrics span {
-    background: rgba(220, 38, 38, 0.15);
-    color: var(--red-soft);
-    padding: 8px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background: #111827;
+
+    border: 1px solid rgba(212,175,55,.25);
+
+    color: #ffffff;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
     font-weight: 700;
-    border: 1px solid rgba(220, 38, 38, 0.25);
+
+    text-align: center;
+
+    transition: all .3s ease;
+}
+.project-metrics span:hover {
+    background: #D4AF37;
+
+    color: #0B1120;
+
+    border-color: #D4AF37;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(212,175,55,.25);
 }
 
 .tools,

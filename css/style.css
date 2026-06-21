@@ -33,24 +33,33 @@ html {
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--black);
+    background:
+        radial-gradient(circle at top left,
+            rgba(37,99,235,0.12),
+            transparent 30%),
+        radial-gradient(circle at bottom right,
+            rgba(212,175,55,0.08),
+            transparent 35%),
+        #050816;
+
+    color: #ffffff;
     color: var(--text-light);
 }
 
 /* Navbar */
 .navbar {
     width: 100%;
-    background: rgba(17, 24, 39, 0.96);
+    background: rgba(8,12,28,0.9);
     padding: 18px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-dark);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,.45);
     position: fixed;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .logo {

@@ -761,19 +761,54 @@ footer {
     align-items: center;
     gap: 10px;
     white-space: nowrap;
+
     background: #111827;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    color: #f9fafb;
+    border: 1px solid rgba(212,175,55,0.35);
+
+    color: #F9FAFB;
+
     padding: 12px 20px;
     border-radius: 999px;
+
     font-size: 16px;
     font-weight: 600;
+
+    transition: all 0.35s ease;
+
+    cursor: pointer;
 }
 
 .skill-pill:hover {
-    color: #D4AF37;
+
+    background: #D4AF37;
+
+    color: #0B1120;
+
     border-color: #D4AF37;
+
     transform: translateY(-4px);
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,0.3),
+        0 0 30px rgba(212,175,55,0.2);
+
+}
+
+.skill-pill:hover img {
+
+    transform: scale(1.1);
+
+}
+
+.skill-pill img {
+
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+
+    transition: all 0.3s ease;
+
 }
 
 @keyframes scrollSkills {
@@ -793,11 +828,30 @@ footer {
         transform: translateX(0);
     }
 }
-.skill-pill img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    flex-shrink: 0;
+.skill-pill::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.15),
+        transparent
+    );
+
+    transform: translateX(-150%);
+    transition: all 0.6s ease;
+}
+
+.skill-pill {
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-pill:hover::before {
+    transform: translateX(150%);
 }
 /* Education Section */
 .education {

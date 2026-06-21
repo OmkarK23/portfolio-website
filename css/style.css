@@ -1050,3 +1050,142 @@ footer {
 
     box-shadow: 0 8px 18px rgba(212,175,55,0.35);
 }
+/* ==============================
+   Appearance Polish
+================================= */
+
+.section {
+    position: relative;
+}
+
+.section:not(.hero)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(212,175,55,0.35),
+        transparent
+    );
+}
+
+.project-card,
+.experience-card,
+.education-card,
+.about-container,
+.contact-container {
+    backdrop-filter: blur(10px);
+}
+
+.project-card,
+.experience-card,
+.education-card {
+    min-height: 100%;
+}
+
+.project-card:hover,
+.experience-card:hover,
+.education-card:hover {
+    transform: translateY(-10px) scale(1.01);
+}
+
+.navbar {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.nav-links a {
+    padding: 8px 0;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+}
+
+.profile-circle {
+    animation: profileGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes profileGlow {
+    from {
+        box-shadow: 0 0 24px rgba(37,99,235,0.25);
+    }
+    to {
+        box-shadow: 0 0 36px rgba(212,175,55,0.38);
+    }
+}
+
+.btn,
+.project-btn,
+.contact-btn {
+    letter-spacing: 0.2px;
+}
+
+.btn:hover,
+.project-btn:hover,
+.contact-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.section-title {
+    letter-spacing: 0.5px;
+}
+
+.project-tags span,
+.skill-pill,
+.hero-badges span {
+    transition: all 0.3s ease;
+}
+
+.project-tags span:hover,
+.skill-pill:hover,
+.hero-badges span:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(212,175,55,0.18);
+}
+
+.project-card h3,
+.experience-card h3,
+.education-card h3 {
+    line-height: 1.25;
+}
+
+.project-card p,
+.experience-card p,
+.about-container p,
+.contact-container p {
+    color: #D1D5DB;
+}
+
+/* Better Project Card Button Alignment */
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card .project-btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Mobile Polish */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 150px;
+    }
+
+    .hero-badges span {
+        width: 100%;
+    }
+
+    .projects-grid {
+        gap: 24px;
+    }
+
+    .section-title {
+        font-size: 34px;
+    }
+}

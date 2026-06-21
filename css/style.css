@@ -787,7 +787,17 @@ footer {
         0 0 15px rgba(212,175,55,0.45),
         0 0 30px rgba(212,175,55,0.25);
 }
+.skill-pill:hover span {
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
 
+.skill-pill:hover img {
+    transform: scale(1.12);
+    position: relative;
+    z-index: 2;
+}
 .skill-pill:hover img {
 
     transform: scale(1.1);

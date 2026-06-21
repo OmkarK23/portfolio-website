@@ -779,19 +779,13 @@ footer {
 }
 
 .skill-pill:hover {
-
     background: #D4AF37;
-
-    color: #0B1120;
-
+    color: #ffffff;
     border-color: #D4AF37;
-
     transform: translateY(-4px);
-
     box-shadow:
-        0 0 15px rgba(212,175,55,0.3),
-        0 0 30px rgba(212,175,55,0.2);
-
+        0 0 15px rgba(212,175,55,0.45),
+        0 0 30px rgba(212,175,55,0.25);
 }
 
 .skill-pill:hover img {

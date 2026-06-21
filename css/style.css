@@ -1247,3 +1247,35 @@ footer {
         text-align: center;
     }
 }
+/* Force Shiny Black Background Across Entire Website */
+body,
+.hero,
+.section,
+.about,
+.skills,
+.projects,
+.experience,
+.education,
+.contact {
+    background:
+        radial-gradient(circle at top left,
+            rgba(37, 99, 235, 0.16),
+            transparent 32%),
+        radial-gradient(circle at bottom right,
+            rgba(212, 175, 55, 0.10),
+            transparent 36%),
+        #050816 !important;
+}
+
+/* Keep cards dark/glossy */
+.about-container,
+.contact-container,
+.project-card,
+.experience-card,
+.education-card,
+.skill-pill {
+    background:
+        linear-gradient(145deg, #111827, #070B18) !important;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+}

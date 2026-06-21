@@ -1189,3 +1189,52 @@ footer {
         font-size: 34px;
     }
 }
+/* Contact Redesign */
+.contact-redesign {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 35px;
+    align-items: center;
+    text-align: left;
+}
+
+.contact-intro h3 {
+    color: #D4AF37;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.contact-intro p {
+    color: #CBD5E1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-actions .contact-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.coffee-btn {
+    background: #D4AF37;
+    color: #0B1120;
+    border-color: #D4AF37;
+}
+
+.coffee-btn:hover {
+    background: transparent;
+    color: #D4AF37;
+}
+
+@media (max-width: 800px) {
+    .contact-redesign {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

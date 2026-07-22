@@ -312,38 +312,39 @@ h2 {
 
 .btn {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 13px 28px;
     margin: 8px;
-    border-radius: 10px;
+    border-radius: 999px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 700;
+    background: transparent;
     transition: all 0.3s ease;
 }
 
 .primary {
-    background: var(--blue);
-    color: var(--white);
-    border: 2px solid var(--blue);
+    border: 1.5px solid var(--gold);
+    color: var(--gold);
 }
 
 .secondary {
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.3);
+    color: var(--text-light);
 }
 
 .primary:hover {
-    background: var(--blue-dark);
-    border-color: var(--blue-dark);
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
     transform: translateY(-4px);
-    box-shadow: 0 12px 26px rgba(29, 158, 117, 0.32);
+    box-shadow: 0 12px 26px rgba(93, 202, 165, 0.28);
 }
 
 .secondary:hover {
-    background: var(--gold);
-    color: var(--black);
+    background: rgba(255,255,255,0.1);
+    border-color: var(--white);
+    color: var(--white);
     transform: translateY(-4px);
-    box-shadow: 0 12px 26px rgba(93, 202, 165, 0.22);
+    box-shadow: 0 12px 26px rgba(255,255,255,0.12);
 }
 
 /* Disable old floating circles if HTML still contains them */
@@ -550,13 +551,27 @@ h2 {
 }
 
 .metric-card {
-    padding: 15px;
-    border-radius: 14px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 700;
+    padding: 14px 14px;
+    border-radius: 10px;
+    text-align: left;
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.metric-value {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.metric-label {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.75;
+    letter-spacing: 0.2px;
 }
 
 .metric-card:hover {
@@ -641,9 +656,11 @@ h2 {
 
 .metric-card {
     padding: 14px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: 700;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
 }
 
 .project-card {
@@ -656,15 +673,16 @@ h2 {
     align-items: center;
     justify-content: center;
 
-    padding: 12px 24px;
+    padding: 11px 24px;
 
-    background: #1D9E75;
-    color: white;
+    background: transparent;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
 
     text-decoration: none;
     font-weight: 700;
 
-    border-radius: 10px;
+    border-radius: 999px;
 
     min-width: 160px;
 
@@ -672,8 +690,8 @@ h2 {
 }
 
 .project-btn:hover {
-    background: transparent;
-    color: var(--gold);
+    background: var(--gold);
+    color: var(--black);
     border-color: var(--gold);
     transform: translateY(-3px);
     box-shadow: 0 10px 22px rgba(29, 158, 117, 0.25);
@@ -764,19 +782,19 @@ h2 {
 }
 
 .contact-btn {
-    padding: 14px 26px;
-    background: var(--blue);
-    color: var(--white);
+    padding: 13px 26px;
+    background: transparent;
+    color: var(--gold);
     text-decoration: none;
-    border-radius: 10px;
-    font-weight: 800;
+    border-radius: 999px;
+    font-weight: 700;
     transition: all 0.3s ease;
-    border: 2px solid var(--blue);
+    border: 1.5px solid var(--gold);
 }
 
 .contact-btn:hover {
-    background: transparent;
-    color: var(--gold);
+    background: var(--gold);
+    color: var(--black);
     border-color: var(--gold);
     transform: translateY(-3px);
 }
@@ -1398,16 +1416,16 @@ footer {
 }
 
 .project-tags span {
-    background: #5DCAA5;
-    color: #0A1612;
-    border: 1px solid #5DCAA5;
+    background: var(--black-card);
+    color: var(--gold);
+    border: 1px solid rgba(93,202,165,0.35);
 
-    padding: 8px 14px;
+    padding: 6px 12px;
 
-    border-radius: 999px;
+    border-radius: 4px;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
 
     transition: all 0.3s ease;
 
@@ -1415,12 +1433,12 @@ footer {
 }
 
 .project-tags span:hover {
-    background: #9FE1CB;
-    border-color: #9FE1CB;
+    background: rgba(93,202,165,0.12);
+    border-color: var(--gold);
 
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
-    box-shadow: 0 8px 18px rgba(93,202,165,0.35);
+    box-shadow: none;
 }
 /* ==============================
    Appearance Polish
@@ -1506,13 +1524,11 @@ footer {
     letter-spacing: 0.5px;
 }
 
-.project-tags span,
 .skill-pill,
 .hero-badges span {
     transition: all 0.3s ease;
 }
 
-.project-tags span:hover,
 .skill-pill:hover,
 .hero-badges span:hover {
     transform: translateY(-4px);
@@ -1594,14 +1610,14 @@ footer {
 }
 
 .coffee-btn {
-    background: #5DCAA5;
-    color: #0A1612;
+    background: transparent;
+    color: #5DCAA5;
     border-color: #5DCAA5;
 }
 
 .coffee-btn:hover {
-    background: transparent;
-    color: #5DCAA5;
+    background: #5DCAA5;
+    color: #0A1612;
 }
 
 @media (max-width: 800px) {
@@ -1757,13 +1773,15 @@ body,
 
     height:46px;
 
-    background:#1D9E75;
+    background:transparent;
 
-    color:white;
+    color:#5DCAA5;
+
+    border:1.5px solid #5DCAA5;
 
     text-decoration:none;
 
-    border-radius:10px;
+    border-radius:999px;
 
     font-weight:700;
 

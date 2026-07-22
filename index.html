@@ -48,26 +48,26 @@
 
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">About <span class="nav-num">01</span></a>
+            <a href="#skills">Skills <span class="nav-num">02</span></a>
+            <a href="#projects">Projects <span class="nav-num">03</span></a>
+            <a href="#experience">Experience <span class="nav-num">04</span></a>
+            <a href="#education">Education <span class="nav-num">05</span></a>
+            <a href="#certifications">Certifications <span class="nav-num">06</span></a>
+            <a href="#contact">Contact <span class="nav-num">07</span></a>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="shape shape-one"></div>
-        <div class="shape shape-two"></div>
-        <div class="shape shape-three"></div>
+    <section id="home" class="hero hero-split">
 
-        <div class="hero-content">
+        <div class="hero-photo">
+            <img src="images/profile.JPG" alt="Omkar Kalekar">
+        </div>
 
-            <div class="profile-circle">
-                <img src="images/profile.JPG" alt="Omkar Photo">
-            </div>
+        <div class="hero-content hero-content-left">
+
+            <p class="hero-eyebrow">Data Engineer &middot; Analytics</p>
+
             <h1>Omkar Kalekar</h1>
 
             <h2>Building Data-Driven Products, Projects & Analytical Solutions</h2>
@@ -86,7 +86,7 @@
             <p class="hero-open">
                 Open to Data Engineering • Data & Business Analyst • Project Management Roles
             </p>
-                
+
             <div class="hero-buttons">
                 <a href="resume/Omkar_Kalekar_Resume.pdf" target="_blank" class="btn primary">View Resume</a>
                 <a href="https://github.com/OmkarK23" target="_blank" class="btn secondary">GitHub</a>
@@ -98,6 +98,7 @@
 
     </section>
     <section id="about" class="about section">
+        <p class="section-eyebrow">01 / About</p>
         <h2 class="section-title">About Me</h2>
 
         <div class="about-container">
@@ -114,6 +115,7 @@
         </div>
     </section>
     <section id="skills" class="skills section">
+    <p class="section-eyebrow">02 / Skills</p>
     <h2 class="section-title">Skills & Tools</h2>
 
     <div class="skills-groups">
@@ -244,65 +246,31 @@
 
     <div class="container">
 
+        <p class="section-eyebrow">03 / Projects</p>
         <h2 class="section-title">Featured Projects</h2>
 
         <div class="projects-grid">
-            <div class="project-card">
+
+            <div class="project-card case-file">
+
+                <div class="case-file-header">
+                    <span class="case-label">Case 01 — Analytics Engineering</span>
+                </div>
 
                 <h3>Student Success Intelligence Platform</h3>
 
-                <p class="project-category">
-                    Databricks Lakehouse | Analytics Engineering | Data Engineering | Business Intelligence
-                </p>
-
                 <p>
-                    Designed and developed an enterprise learning analytics platform that
-                    centralizes academic, enrollment, attendance, and Blackboard LMS data into
-                    a scalable Databricks Lakehouse, enabling executive reporting, early risk
-                    detection, and proactive student success initiatives.
+                    An enterprise learning analytics platform centralizing academic, enrollment, attendance, and
+                    Blackboard LMS data into a scalable Databricks Lakehouse — enabling executive reporting and
+                    early risk detection for at-risk students.
                 </p>
 
                 <div class="project-metrics">
-
-                    <div class="metric-card metric-databricks">
-                        8,500 Students
-                    </div>
-
-                    <div class="metric-card metric-databricks">
-                        147K+ Enrollments
-                    </div>
-
-                    <div class="metric-card metric-databricks">
-                        7.5M LMS Events
-                    </div>
-
-                    <div class="metric-card metric-databricks">
-                        13+ Gold Views
-                    </div>
-
+                    <div class="metric-card metric-databricks">8,500 Students</div>
+                    <div class="metric-card metric-databricks">147K+ Enrollments</div>
+                    <div class="metric-card metric-databricks">7.5M LMS Events</div>
+                    <div class="metric-card metric-databricks">13+ Gold Views</div>
                 </div>
-
-                <ul>
-
-                    <li>Designed and implemented a Medallion (Bronze, Silver, Gold) Lakehouse architecture using Databricks, Delta Lake, Apache Spark, and Spark SQL.</li>
-
-                    <li>Built scalable ETL pipelines and engineered engagement, attendance, and academic performance features from student information and Blackboard LMS activity.</li>
-
-                    <li>Developed reusable Gold semantic views powering executive KPIs, student success analytics, department benchmarking, and course performance reporting.</li>
-
-                    <li>Created three interactive Databricks Lakeview dashboards for university leadership, academic advisors, and department chairs.</li>
-
-                    <li>Implemented a rule-based intervention engine that identifies at-risk students and generates a Priority Outreach Queue for proactive academic support.</li>
-
-                    <li>Applied dimensional modeling and semantic analytics to deliver a scalable, enterprise-ready reporting platform.</li>
-
-                </ul>
-
-                <p class="project-tools">
-                    <strong>Tools:</strong>
-                    Databricks, Delta Lake, Apache Spark, Spark SQL,
-                    Python, Lakeview Dashboards, Git, GitHub
-                </p>
 
                 <div class="project-tags">
                     <span>Databricks</span>
@@ -312,67 +280,35 @@
                     <span>Analytics Engineering</span>
                 </div>
 
+                <p class="case-outcome">Outcome — 7.5M+ LMS events unified into 13+ executive Gold views</p>
+
                 <a href="https://github.com/OmkarK23/learning-analytics-lakehouse-platform"
                 target="_blank"
                 class="project-btn">
                     View Project
                 </a>
             </div>
-            <div class="project-card">
+
+            <div class="project-card case-file">
+
+                <div class="case-file-header">
+                    <span class="case-label">Case 02 — Data Engineering</span>
+                </div>
 
                 <h3>Cloud FinOps Intelligence Platform</h3>
 
-                <p class="project-category">
-                    AWS Cloud | FinOps | Data Engineering | Analytics
-                </p>
-
                 <p>
-                    Designed and developed a serverless Cloud FinOps Intelligence Platform
-                    to automate cloud cost analytics, optimization, forecasting, and
-                    executive reporting using AWS services and machine learning.
+                    A serverless Cloud FinOps platform automating cloud cost analytics, optimization, forecasting,
+                    and executive reporting using AWS services and machine learning.
                 </p>
 
                 <div class="project-metrics">
-
-                    <div class="metric-card metric-finops">
-                        $2.1M+ Spend Analyzed
-                    </div>
-
-                    <div class="metric-card metric-finops">
-                        $420K+ Waste Identified
-                    </div>
-
-                    <div class="metric-card metric-finops">
-                        $278K+ Savings Potential
-                    </div>
-
-                    <div class="metric-card metric-finops">
-                        AWS Serverless
-                    </div>
-
+                    <div class="metric-card metric-finops">$2.1M+ Spend Analyzed</div>
+                    <div class="metric-card metric-finops">$420K+ Waste Identified</div>
+                    <div class="metric-card metric-finops">$278K+ Savings Potential</div>
+                    <div class="metric-card metric-finops">AWS Serverless</div>
                 </div>
 
-                <ul>
-                    <li>Built a serverless architecture using Amazon S3, AWS Lambda, AWS Glue, and Amazon Athena.</li>
-
-                    <li>Developed ETL pipelines using AWS Glue and PySpark to automate cloud billing data processing.</li>
-
-                    <li>Created Athena analytics views for cost optimization, utilization analysis, and FinOps reporting.</li>
-
-                    <li>Built executive dashboards using Streamlit and Plotly to visualize cloud spend, efficiency metrics, and optimization opportunities.</li>
-
-                    <li>Implemented cloud spend forecasting and budget risk prediction using Prophet machine learning models.</li>
-
-                    <li>Automated end-to-end data refresh using S3 Event Notifications, Lambda triggers, and Glue workflows.</li>
-                </ul>
-
-                <p class="project-tools">
-                    <strong>Tools:</strong>
-                    AWS Lambda, Amazon S3, AWS Glue, Athena,
-                    PySpark, Streamlit, Plotly, Prophet, Python
-                </p>
-
-                
                 <div class="project-tags">
                     <span>AWS</span>
                     <span>FinOps</span>
@@ -380,6 +316,9 @@
                     <span>Streamlit</span>
                     <span>Forecasting</span>
                 </div>
+
+                <p class="case-outcome">Outcome — $420K+ in cloud waste identified across $2.1M+ analyzed spend</p>
+
                 <a href="https://github.com/OmkarK23/cloud-finops-intelligence-platform"
                 target="_blank"
                 class="project-btn">
@@ -388,181 +327,105 @@
 
             </div>
 
-            <!-- Project 1 -->
-            <div class="project-card">
+            <div class="project-card case-file">
+
+                <div class="case-file-header">
+                    <span class="case-label">Case 03 — Product / AI</span>
+                </div>
 
                 <h3>AI Event Planning & Engagement System</h3>
 
-                <p class="project-category">
-                    Product Management | AI Analytics | Event Intelligence Platform
-                </p>
-
                 <p>
-                    Acted as Product Owner  and Led the end-to-end design, development, and deployment of an AI-powered
-                    event planning platform that helps organizers improve attendance,
-                    optimize engagement strategies, and analyze attendee feedback using
-                    machine learning and NLP.
+                    Led end-to-end design and deployment of an AI-powered event planning platform helping
+                    organizers improve attendance, optimize engagement strategy, and analyze attendee feedback
+                    using machine learning and NLP.
                 </p>
 
                 <div class="project-metrics">
-
-                    <div class="metric-card metric-ai">
-                        Attendance Forecasting
-                    </div>
-
-                    <div class="metric-card metric-ai">
-                        NLP Analysis
-                    </div>
-
-                    <div class="metric-card metric-ai">
-                        AI Strategy Generation
-                    </div>
-
-                    <div class="metric-card metric-ai">
-                        Streamlit Deployment
-                    </div>
-
+                    <div class="metric-card metric-ai">Attendance Forecasting</div>
+                    <div class="metric-card metric-ai">NLP Analysis</div>
+                    <div class="metric-card metric-ai">AI Strategy Generation</div>
+                    <div class="metric-card metric-ai">Streamlit Deployment</div>
                 </div>
 
-                <ul>
-                    <li>Defined product vision, user workflows, feature roadmap, and platform requirements.</li>
-                    <li>Developed attendance prediction engine using Scikit-Learn.</li>
-                    <li>Implemented AI-powered event engagement recommendations.</li>
-                    <li>Built attendee feedback analysis using TextBlob NLP.</li>
-                    <li>Integrated SQLite-based historical event reporting.</li>
-                </ul>
-
-                <p class="project-tools">
-                    <strong>Tools:</strong> Python, Scikit-Learn,
-                    SQLite, Plotly, Pandas, GitHub, Streamlit Cloud
-                </p>
-
-                
                 <div class="project-tags">
                     <span>Product Management</span>
                     <span>Machine Learning</span>
                     <span>NLP</span>
                     <span>TextBlob</span>
                     <span>Streamlit</span>
-                    <span>Analytics</span>
                 </div>
+
+                <p class="case-outcome">Outcome — Attendance forecasting and NLP feedback analysis shipped to production</p>
+
                 <a href="https://github.com/OmkarK23/ai-event-planner.git" target="_blank" class="project-btn">
                     View Project
                 </a>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
+            <div class="project-card case-file">
+
+                <div class="case-file-header">
+                    <span class="case-label">Case 04 — Data Engineering</span>
+                </div>
 
                 <h3>Real-Time Weather & Utility Monitoring Pipeline</h3>
 
-                <p class="project-category">
-                    Data Engineering | Real-Time Analytics | Cloud Pipeline
-                </p>
-
                 <p>
-                    Designed and deployed a real-time weather monitoring platform
-                    leveraging Kafka, PostgreSQL, and analytics dashboards to support
-                    operational visibility and risk monitoring.
+                    A real-time weather monitoring platform leveraging Kafka, PostgreSQL, and analytics dashboards
+                    to support operational visibility and risk monitoring.
                 </p>
 
                 <div class="project-metrics">
-
-                    <div class="metric-card metric-data">
-                        Kafka Streaming
-                    </div>
-
-                    <div class="metric-card metric-data">
-                        PostgreSQL
-                    </div>
-
-                    <div class="metric-card metric-data">
-                        Real-Time Analytics
-                    </div>
-
-                    <div class="metric-card metric-data">
-                        Dashboard Reporting
-                    </div>
-
+                    <div class="metric-card metric-data">Kafka Streaming</div>
+                    <div class="metric-card metric-data">PostgreSQL</div>
+                    <div class="metric-card metric-data">Real-Time Analytics</div>
+                    <div class="metric-card metric-data">Dashboard Reporting</div>
                 </div>
-                <ul>
-                    <li>Built Kafka producer-consumer architecture.</li>
-                    <li>Processed live weather events and utility risk alerts.</li>
-                    <li>Stored structured event data in PostgreSQL.</li>
-                    <li>Generated analytics dashboards and reports.</li>
-                    <li>Designed data flow and monitoring workflows.</li>
-                </ul>
 
-                <p class="project-tools">
-                    <strong>Tools:</strong> Kafka, PostgreSQL, Python,
-                    Pandas, Docker, GitHub
-                </p>
-
-                
                 <div class="project-tags">
                     <span>Kafka</span>
                     <span>Data Engineering</span>
                     <span>ETL</span>
                     <span>Streaming Analytics</span>
                 </div>
+
+                <p class="case-outcome">Outcome — 1,440+ weather &amp; utility events processed daily via Kafka</p>
+
                 <a href="https://github.com/OmkarK23/weather-utility-kafka-pipeline.git" target="_blank" class="project-btn">
                     View Project
                 </a>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
+            <div class="project-card case-file">
+
+                <div class="case-file-header">
+                    <span class="case-label">Case 05 — Machine Learning</span>
+                </div>
 
                 <h3>H1B Visa Outcome Prediction</h3>
 
-                <p class="project-category">
-                    Predictive Analytics | Machine Learning | Data Science
-                </p>
-
                 <p>
-                    Developed a machine learning solution to predict H1B visa outcomes
-                    using historical application data and predictive modeling techniques.
+                    A machine learning solution predicting H1B visa outcomes using historical application data
+                    and predictive modeling techniques.
                 </p>
 
                 <div class="project-metrics">
-
-                    <div class="metric-card metric-ml">
-                        Classification Models
-                    </div>
-
-                    <div class="metric-card metric-ml">
-                        Predictive Analytics
-                    </div>
-
-                    <div class="metric-card metric-ml">
-                        Data Mining
-                    </div>
-
-                    <div class="metric-card metric-ml">
-                        Scikit-Learn
-                    </div>
-
+                    <div class="metric-card metric-ml">Classification Models</div>
+                    <div class="metric-card metric-ml">Predictive Analytics</div>
+                    <div class="metric-card metric-ml">Data Mining</div>
+                    <div class="metric-card metric-ml">Scikit-Learn</div>
                 </div>
 
-                <ul>
-                    <li>Performed data cleaning and feature engineering.</li>
-                    <li>Built predictive classification models.</li>
-                    <li>Analyzed approval trends and risk factors.</li>
-                    <li>Created visualizations for business stakeholders.</li>
-                </ul>
-
-                <p class="project-tools">
-                    <strong>Tools:</strong> Python, Pandas, Scikit-Learn,
-                    Matplotlib, Seaborn, Jupyter Notebook
-                </p>
-
-               
                 <div class="project-tags">
                     <span>Machine Learning</span>
                     <span>Data Mining</span>
                     <span>Predictive Analytics</span>
                     <span>Classification</span>
                 </div>
+
+                <p class="case-outcome">Outcome — Classification models built on historical H1B application data</p>
+
                  <a href="https://github.com/OmkarK23/H1B_Case_Prediction.git" target="_blank" class="project-btn">
                     View Project
                 </a>
@@ -575,176 +438,117 @@
 </section>
 <section id="experience" class="experience section">
 
+    <p class="section-eyebrow">04 / Experience</p>
     <h2 class="section-title">Professional Experience</h2>
 
-    <div class="experience-container">
+    <div class="timeline">
 
         <!-- eSurgi -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Feb 2026 – May 2026</div>
 
-        <div class="experience-card">
-
-            <div class="experience-logo">
-                <img src="images/education/esurgi.webp" alt="eSurgi Logo">
-            </div>
-
-            <div class="experience-content">
-
-                <span class="experience-tag">Project Management</span>
-
-                <h3>Project Management Fellow</h3>
-
-                <a href="https://esurgi.com"
-                   target="_blank"
-                   class="company-link">
-                    eSurgi
-                </a>
-
-                <p class="experience-date">
-                    Feb 2026 – May 2026 | Remote, USA
-                </p>
-
+            <div class="timeline-body">
+                <div class="timeline-header">
+                    <img class="timeline-logo" src="images/education/esurgi.webp" alt="eSurgi Logo">
+                    <div>
+                        <h3>Project Management Fellow</h3>
+                        <a href="https://esurgi.com" target="_blank" class="company-link">eSurgi</a>
+                        <span class="experience-tag">Project Management</span>
+                    </div>
+                </div>
+                <p class="timeline-location">Remote, USA</p>
                 <ul>
                     <li>Partnered directly with the CEO to coordinate strategic initiatives, align project priorities with business goals, and support execution across cross-functional teams.</li>
-
                     <li>Led project planning activities by managing schedules, tracking milestones, monitoring risks, and improving visibility into project progress for leadership.</li>
-
                     <li>Conducted customer discovery conversations with prospective users to understand business challenges, validate product needs, and communicate customer insights to leadership for product refinement.</li>
-
                     <li>Engaged with potential clients throughout the sales and onboarding process by demonstrating product value, addressing questions, and strengthening customer relationships.</li>
-
                     <li>Facilitated communication between business stakeholders and internal teams, improving collaboration, decision-making, and execution across ongoing initiatives.</li>
-
                     <li>Built KPI dashboards and project reports using Excel and Tableau, enabling leadership to monitor project health, identify bottlenecks, and support data-driven operational decisions.</li>
-                    <li> Contributed to process improvements by documenting workflows, tracking action items, and helping establish more structured project management practices. </li>
+                    <li>Contributed to process improvements by documenting workflows, tracking action items, and helping establish more structured project management practices.</li>
                 </ul>
-
             </div>
-
         </div>
 
         <!-- Weatherford -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jun 2023 – Jun 2024</div>
 
-        <div class="experience-card">
-
-            <div class="experience-logo">
-                <img src="images/education/weatherford.jpg" alt="Weatherford Logo">
-            </div>
-
-            <div class="experience-content">
-
-                <span class="experience-tag">Product Analytics</span>
-
-                <h3>Product Analyst</h3>
-
-                <a href="https://www.weatherford.com"
-                   target="_blank"
-                   class="company-link">
-                    Weatherford
-                </a>
-
-                <p class="experience-date">
-                    Jun 2023 – Jun 2024 | Mumbai, India
-                </p>
-
+            <div class="timeline-body">
+                <div class="timeline-header">
+                    <img class="timeline-logo" src="images/education/weatherford.jpg" alt="Weatherford Logo">
+                    <div>
+                        <h3>Product Analyst</h3>
+                        <a href="https://www.weatherford.com" target="_blank" class="company-link">Weatherford</a>
+                        <span class="experience-tag">Product Analytics</span>
+                    </div>
+                </div>
+                <p class="timeline-location">Mumbai, India</p>
                 <ul>
                     <li>Collaborated with technical and business stakeholders to analyze data workflows and improve enterprise analytics processes.</li>
-
                     <li>Designed and executed complex SQL queries on large datasets, enabling faster reporting and improved business insights.</li>
-
                     <li>Developed Power BI and Excel dashboards that improved reporting efficiency by 30% and increased visibility into business performance.</li>
-
                     <li>Supported integration of multiple data sources into centralized analytics environments, improving data consistency and accessibility.</li>
-
                     <li>Identified inefficiencies in reporting processes and recommended improvements that reduced manual effort.</li>
-
                     <li>Partnered with cross-functional teams to ensure analytical solutions aligned with business requirements and operational goals.</li>
                 </ul>
-
             </div>
-
         </div>
 
         <!-- GEARS -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jul 2025 – May 2026</div>
 
-        <div class="experience-card">
-
-            <div class="experience-logo">
-                <img src="images/education/gears.png" alt="GEARS Logo">
-            </div>
-
-            <div class="experience-content">
-
-                <span class="experience-tag">Leadership & Events</span>
-
-                <h3>Events Lead</h3>
-
-                <a href="https://gears.umbc.edu/"
-                   target="_blank"
-                   class="company-link">
-                    Graduate Experience, Achievements & Research Successes (GEARS)
-                </a>
-
-                <p class="experience-date">
-                    Jul 2025 – May 2026 | Baltimore, MD
-                </p>
-
+            <div class="timeline-body">
+                <div class="timeline-header">
+                    <img class="timeline-logo" src="images/education/gears.png" alt="GEARS Logo">
+                    <div>
+                        <h3>Events Lead</h3>
+                        <a href="https://gears.umbc.edu/" target="_blank" class="company-link">Graduate Experience, Achievements & Research Successes (GEARS)</a>
+                        <span class="experience-tag">Leadership & Events</span>
+                    </div>
+                </div>
+                <p class="timeline-location">Baltimore, MD</p>
                 <ul>
                     <li>Led planning and execution of graduate student events by managing schedules, budgets, and stakeholder communications.</li>
-
                     <li>Organized workshops, networking sessions, research presentations, and community engagement initiatives.</li>
-
                     <li>Coordinated resources, logistics, and cross-functional collaboration to ensure successful event delivery.</li>
-
                     <li>Developed promotional strategies and event outreach plans to increase awareness and participation.</li>
-
                     <li>Strengthened leadership, project coordination, communication, and stakeholder management skills through event execution.</li>
                 </ul>
-
             </div>
-
         </div>
 
         <!-- TCR -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Jan 2022 – Apr 2022</div>
 
-        <div class="experience-card">
-
-            <div class="experience-logo">
-                <img src="images/education/tcr.jpeg" alt="TCR Logo">
-            </div>
-
-            <div class="experience-content">
-
-                <span class="experience-tag">Data Science</span>
-
-                <h3>Data Science Intern</h3>
-
-                <a href="#"
-                   class="company-link">
-                    TCR Innovation
-                </a>
-
-                <p class="experience-date">
-                    Jan 2022 – Apr 2022 | Remote
-                </p>
-
+            <div class="timeline-body">
+                <div class="timeline-header">
+                    <img class="timeline-logo" src="images/education/tcr.jpeg" alt="TCR Logo">
+                    <div>
+                        <h3>Data Science Intern</h3>
+                        <a href="#" class="company-link">TCR Innovation</a>
+                        <span class="experience-tag">Data Science</span>
+                    </div>
+                </div>
+                <p class="timeline-location">Remote</p>
                 <ul>
                     <li>Built machine learning pipelines using Python, Pandas, NumPy, and PySpark to analyze historical datasets and predict business outcomes.</li>
-
                     <li>Developed Power BI and Tableau dashboards to communicate model performance and analytical insights to stakeholders.</li>
-
                     <li>Improved data processing efficiency by approximately 20% through workflow optimization and automation.</li>
-
                     <li>Leveraged AI-assisted tools to accelerate data analysis, experimentation, and rapid prototyping of analytical solutions.</li>
                 </ul>
-
             </div>
-
         </div>
 
     </div>
-
 </section>
 <section id="education" class="education section">
+    <p class="section-eyebrow">05 / Education</p>
     <h2 class="section-title">Education</h2>
 
     <div class="education-grid">
@@ -793,6 +597,7 @@
 </section>
 <section id="certifications" class="certifications">
 
+    <p class="section-eyebrow">06 / Certifications</p>
     <h2 class="section-title">Certifications</h2>
 
     <p class="section-subtitle">
@@ -938,6 +743,7 @@
 
 </section>
 <section id="contact" class="contact section">
+    <p class="section-eyebrow">07 / Contact</p>
     <h2 class="section-title">Let's Connect</h2>
 
     <div class="contact-container contact-redesign">

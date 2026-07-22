@@ -40,6 +40,12 @@
     <nav class="navbar">
         <div class="logo">Omkar Kalekar</div>
 
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('active'); this.setAttribute('aria-expanded', this.classList.contains('active'));">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -110,303 +116,80 @@
     <section id="skills" class="skills section">
     <h2 class="section-title">Skills & Tools</h2>
 
-    <div class="skills-marquee">
+    <div class="skills-groups">
 
-        <div class="skills-track">
-            <div class="skill-pill">
-                <img src="images/skills/product.png" alt="Product Management">
-                <span>Product Analytics</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/project.svg" alt="Project Management">
-                <span>Project Management</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/business.png" alt="Business Analytics">
-                <span>Business Analytics</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/ml.png" alt="Machine Learning">
-                <span>Machine Learning</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/ai.png" alt="Artificial Intelligence">
-                <span>Artificial Intelligence</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/data.png" alt="Data Engineering">
-                <span>Data Engineering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/inventory.png" alt="Requirements Gathering">
-                <span>Requirements Gathering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/agile.svg" alt="Agile / Scrum">
-                <span>Agile / Scrum</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/kpi.png" alt="KPI Tracking">
-                <span>KPI Tracking</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/QA.svg" alt="Quality Assurance">
-                <span>Quality Assurance</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/stakeholder.png" alt="Stakeholder Management">
-                <span>Stakeholder Management</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/scheduling.png" alt="Scheduling">
-                <span> Project Scheduling</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/feature.png" alt="Feature Engineering">
-                <span> Feature engineering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/aws.webp" alt="AWS">
-                <span>AWS</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/adp.png" alt="ETL Pipelines">
-                <span>ETL Pipelines</span>
-            </div>
-
-           <div class="skill-pill">
-                <img src="images/skills/product.png" alt="Product Management">
-                <span>Product Analytics</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/project.svg" alt="Project Management">
-                <span>Project Management</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/business.png" alt="Business Analytics">
-                <span>Business Analytics</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/ml.png" alt="Machine Learning">
-                <span>Machine Learning</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/ai.png" alt="Artificial Intelligence">
-                <span>Artificial Intelligence</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/data.png" alt="Data Engineering">
-                <span>Data Engineering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/inventory.png" alt="Requirements Gathering">
-                <span>Requirements Gathering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/agile.svg" alt="Agile / Scrum">
-                <span>Agile / Scrum</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/kpi.png" alt="KPI Tracking">
-                <span>KPI Tracking</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/QA.svg" alt="Quality Assurance">
-                <span>Quality Assurance</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/stakeholder.png" alt="Stakeholder Management">
-                <span>Stakeholder Management</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/scheduling.png" alt="Scheduling">
-                <span> Project Scheduling</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/aws.webp" alt="AWS">
-                <span>AWS</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/feature.png" alt="Feature Engineering">
-                <span> Feature engineering</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/adp.png" alt="ETL Pipelines">
-                <span>ETL Pipelines</span>
+        <div class="skill-group">
+            <h3 class="skill-group-title">Languages & Databases</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/python.svg" alt="Python"><span>Python</span></div>
+                <div class="skill-pill"><img src="images/skills/cpp.png" alt="C++"><span>C++</span></div>
+                <div class="skill-pill"><img src="images/skills/sql.svg" alt="SQL"><span>SQL</span></div>
+                <div class="skill-pill"><img src="images/skills/snowflake.png" alt="Snowflake"><span>Snowflake</span></div>
+                <div class="skill-pill"><img src="images/skills/postgresql.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+                <div class="skill-pill"><img src="images/skills/sqlite.svg" alt="SQLite"><span>SQLite</span></div>
             </div>
         </div>
- 
-        <div class="skills-track reverse">
-            <div class="skill-pill">
-                <img src="images/skills/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/cpp.png" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/sql.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/snowflake.png" alt="Snowflake">
-                <span>Snowflake</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/powerbi.svg" alt="Power BI">
-                <span>Power BI</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/tableau.svg" alt="Tableau">
-                <span>Tableau</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/spark.svg" alt="Spark">
-                <span>PySpark</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/kafka.svg" alt="Kafka">
-                <span>Kafka</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/streamlit.svg" alt="Streamlit">
-                <span>Streamlit</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/databricks.svg" alt="DataBricks">
-                <span>Databricks</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/postgresql.svg" alt="PostgreSQL">
-                <span>PostgreSQL</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/sqlite.svg" alt="SQLite">
-                <span>SQLite</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/github.svg" alt="GitHub">
-                <span>GitHub</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/scikitlearn.svg" alt="Scikit-learn">
-                <span>Scikit-learn</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/confluence.svg" alt="Confluence">
-                <span>Confluence</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/textblob.webp" alt="TextBlob">
-                <span>TextBlob</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/jira.svg" alt="Jira">
-                <span>Jira</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/Athena.png" alt="Athena">
-                <span>Athena</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/Lambda.png" alt="Lambda">
-                <span>AWS Lambda</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/amazons3.svg" alt="amazons3">
-                <span>Amazon S3</span>
-            </div>
 
-            <div class="skill-pill">
-                <img src="images/skills/python.svg" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/cpp.png" alt="C++">
-                <span>C++</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/sql.svg" alt="SQL">
-                <span>SQL</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/snowflake.png" alt="Snowflake">
-                <span>Snowflake</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/powerbi.svg" alt="Power BI">
-                <span>Power BI</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/tableau.svg" alt="Tableau">
-                <span>Tableau</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/spark.svg" alt="Spark">
-                <span>PySpark</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/kafka.svg" alt="Kafka">
-                <span>Kafka</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/streamlit.svg" alt="Streamlit">
-                <span>Streamlit</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/postgresql.svg" alt="PostgreSQL">
-                <span>PostgreSQL</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/databricks.svg" alt="DataBricks">
-                <span>Databricks</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/sqlite.svg" alt="SQLite">
-                <span>SQLite</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/github.svg" alt="GitHub">
-                <span>GitHub</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/scikitlearn.svg" alt="Scikit-learn">
-                <span>Scikit-learn</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/confluence.svg" alt="Confluence">
-                <span>Confluence</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/textblob.webp" alt="TextBlob">
-                <span>TextBlob</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/git.svg" alt="Git">
-                <span>Git</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/jira.svg" alt="Jira">
-                <span>Jira</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/Athena.png" alt="Athena">
-                <span>Athena</span>
-            </div>
-            <div class="skill-pill">
-                <img src="images/skills/Lambda.png" alt="Lambda">
-                <span>AWS Lambda</span>
-            </div>
-             <div class="skill-pill">
-                <img src="images/skills/amazons3.svg" alt="amazons3">
-                <span>Amazon S3</span>
+        <div class="skill-group">
+            <h3 class="skill-group-title">Data Engineering & Cloud</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/data.png" alt="Data Engineering"><span>Data Engineering</span></div>
+                <div class="skill-pill"><img src="images/skills/adp.png" alt="ETL Pipelines"><span>ETL Pipelines</span></div>
+                <div class="skill-pill"><img src="images/skills/spark.svg" alt="Spark"><span>PySpark</span></div>
+                <div class="skill-pill"><img src="images/skills/kafka.svg" alt="Kafka"><span>Kafka</span></div>
+                <div class="skill-pill"><img src="images/skills/databricks.svg" alt="DataBricks"><span>Databricks</span></div>
+                <div class="skill-pill"><img src="images/skills/aws.webp" alt="AWS"><span>AWS</span></div>
+                <div class="skill-pill"><img src="images/skills/Lambda.png" alt="AWS Lambda"><span>AWS Lambda</span></div>
+                <div class="skill-pill"><img src="images/skills/amazons3.svg" alt="Amazon S3"><span>Amazon S3</span></div>
+                <div class="skill-pill"><img src="images/skills/Athena.png" alt="Athena"><span>Athena</span></div>
             </div>
         </div>
+
+        <div class="skill-group">
+            <h3 class="skill-group-title">Analytics & BI</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/powerbi.svg" alt="Power BI"><span>Power BI</span></div>
+                <div class="skill-pill"><img src="images/skills/tableau.svg" alt="Tableau"><span>Tableau</span></div>
+                <div class="skill-pill"><img src="images/skills/business.png" alt="Business Analytics"><span>Business Analytics</span></div>
+                <div class="skill-pill"><img src="images/skills/kpi.png" alt="KPI Tracking"><span>KPI Tracking</span></div>
+                <div class="skill-pill"><img src="images/skills/feature.png" alt="Feature Engineering"><span>Feature Engineering</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3 class="skill-group-title">AI & Machine Learning</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/ml.png" alt="Machine Learning"><span>Machine Learning</span></div>
+                <div class="skill-pill"><img src="images/skills/ai.png" alt="Artificial Intelligence"><span>Artificial Intelligence</span></div>
+                <div class="skill-pill"><img src="images/skills/scikitlearn.svg" alt="Scikit-learn"><span>Scikit-learn</span></div>
+                <div class="skill-pill"><img src="images/skills/textblob.webp" alt="TextBlob"><span>TextBlob</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3 class="skill-group-title">Product & Project Management</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/product.png" alt="Product Management"><span>Product Analytics</span></div>
+                <div class="skill-pill"><img src="images/skills/project.svg" alt="Project Management"><span>Project Management</span></div>
+                <div class="skill-pill"><img src="images/skills/agile.svg" alt="Agile / Scrum"><span>Agile / Scrum</span></div>
+                <div class="skill-pill"><img src="images/skills/inventory.png" alt="Requirements Gathering"><span>Requirements Gathering</span></div>
+                <div class="skill-pill"><img src="images/skills/stakeholder.png" alt="Stakeholder Management"><span>Stakeholder Management</span></div>
+                <div class="skill-pill"><img src="images/skills/scheduling.png" alt="Scheduling"><span>Project Scheduling</span></div>
+                <div class="skill-pill"><img src="images/skills/QA.svg" alt="Quality Assurance"><span>Quality Assurance</span></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+            <h3 class="skill-group-title">Tools & Collaboration</h3>
+            <div class="skill-group-pills">
+                <div class="skill-pill"><img src="images/skills/github.svg" alt="GitHub"><span>GitHub</span></div>
+                <div class="skill-pill"><img src="images/skills/git.svg" alt="Git"><span>Git</span></div>
+                <div class="skill-pill"><img src="images/skills/jira.svg" alt="Jira"><span>Jira</span></div>
+                <div class="skill-pill"><img src="images/skills/confluence.svg" alt="Confluence"><span>Confluence</span></div>
+                <div class="skill-pill"><img src="images/skills/streamlit.svg" alt="Streamlit"><span>Streamlit</span></div>
+            </div>
+        </div>
+
     </div>
 </section>
 <section id="projects" class="projects section">
@@ -1019,7 +802,7 @@
 
             <p>Atlassian</p>
 
-            <span>Issued: Nov 2025</span>
+            <span>Issued: Nov 2026</span>
 
             <a href="https://www.linkedin.com/learning/certificates/52552fd2f9c9a55a7e1071c67eed62adeb1898e18a2710a1834bbd2fb4424c10/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B1uPAaYPySzuVteynJJyyLg%3D%3D"
                target="_blank"

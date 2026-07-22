@@ -32,7 +32,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     background:
         radial-gradient(circle at top left,
             rgba(37,99,235,0.12),
@@ -63,6 +63,7 @@ body {
 }
 
 .logo {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 22px;
     font-weight: 800;
     color: var(--gold);
@@ -171,8 +172,9 @@ body {
 }
 
 h1 {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 60px;
-    font-weight: 850;
+    font-weight: 700;
     letter-spacing: 0.4px;
     color: var(--white);
     margin-bottom: 12px;
@@ -245,6 +247,7 @@ h2 {
 }
 
 .section-title {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     text-align: center;
     font-size: 42px;
     color: var(--white);
@@ -1473,4 +1476,19 @@ body,
 
     color:#0B1120;
 
+}
+
+/* ==============================
+   Accessibility: respect reduced motion
+================================= */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    .skills-track {
+        animation: none !important;
+    }
 }

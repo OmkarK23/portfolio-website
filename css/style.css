@@ -1643,6 +1643,10 @@ body,
         #0A1612 !important;
 }
 
+.hero {
+    background: #0A1612 !important;
+}
+
 /* Keep cards dark/glossy */
 .about-container,
 .contact-container,

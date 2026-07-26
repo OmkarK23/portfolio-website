@@ -113,21 +113,107 @@
     </section>
     <section id="about" class="about section">
         <p class="section-eyebrow">01 / About</p>
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title">My Journey</h2>
 
         <div class="about-container">
-            <p>
-                I am an Information Systems graduate student at UMBC with experience in Product Analytics, Business Analysis, Project Coordination, and Data Analytics. I enjoy working at the intersection of business, technology, and data to solve complex problems, improve decision-making, and deliver impactful solutions. Through roles as a Product Analyst at Weatherford and a Project Manager Intern at eSurgi, I have collaborated with stakeholders and cross-functional teams to gather requirements, analyze workflows, track KPIs, manage project execution, and support product and operational improvements. 
-
+            <p class="about-intro">
+                A small-town start, a few borders crossed, and a growing pull toward data, leadership, and building things that matter.
+                Here's how I got here — chapter by chapter.
             </p>
 
-            <p>
-                My experience includes building dashboards, analyzing business data, supporting system validation, and translating business needs into actionable insights using SQL, Python, Power BI, Tableau, and modern analytics tools.
-                I am passionate about leveraging data and technology to create practical solutions, including AI-powered analytics platforms, real-time data engineering pipelines, and business intelligence applications. I am actively seeking opportunities in Data Engineering, Data & Business Analysis, and Project Management where I can contribute to data-driven decision-making, process improvement, and high-quality delivery.
+            <div class="story-accordion">
 
+                <div class="story-item open">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">01</span>
+                        <span class="story-title">Where It Started</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>Growing up in a small town near Pune, tech wasn't handed to me — I had to go find it. That search led me to Savitribai Phule Pune University, where I studied Electronics &amp; Telecommunications Engineering and wrote my first line of Python code. I still remember my first real project — it wasn't polished, but it was mine, and it was the moment code stopped being coursework and started being something I wanted to get good at.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">02</span>
+                        <span class="story-title">The First Dataset</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>In my third year, I got my first real taste of data science as an intern at TCR. I worked on an employee attrition project — digging into why people were leaving specific organizations, and what the data actually said about it versus what everyone assumed. It was the first time I used data to answer a genuinely open question instead of a textbook one, and it planted the seed for everything that came after.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">03</span>
+                        <span class="story-title">Learning to Lead</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>That same year, my peers elected me Vice President of the E&amp;TC Engineering Student Association. By my final year, I was President — organizing technical workshops, cultural events, and professional development programs for the department. It taught me something no coursework could: how to rally people around a shared goal, and how to actually deliver on one.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">04</span>
+                        <span class="story-title">Between Two Sides</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>After graduating, I joined Weatherford as a Product Analyst, working as the technical liaison between clients and developers. I'd meet virtually with clients to understand issues they were facing, recreate those issues myself when I could, and file the right Jira tickets for the dev team — then use dashboards and data visualization to show what was happening and what could be improved. The moment I'm proudest of: I noticed a recurring issue at one client, dug into the data, and found the same pattern showing up across other clients too. Presenting that finding — and watching the developers build a fix off the back of it — was the moment I felt like I'd actually moved the needle. I loved working as that technical liaison.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">05</span>
+                        <span class="story-title">A New Chapter</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>Choosing to pursue my Master's at UMBC was bigger than a new degree — it was the first time I'd ever left the country. I chose Information Systems specifically because it let me go deeper into data science and data architecture while also building real project and product management skills — both things I cared about. The coursework covered a wide range: data science and engineering, product management, cybersecurity, data analytics, SDLC/PDLC, and research-focused case studies. I got a lot of praise along the way for something I didn't expect to be a strength: taking complex technical work and explaining it in a way that was easy for anyone to follow. Outside the classroom, I worked part-time as a Math Tutor through UMBC's Reach Together program, working with middle schoolers from public schools in the county — one of the most rewarding parts of my time here.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">06</span>
+                        <span class="story-title">Back to Leading</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>I carried my leadership experience into GEARS as Events Lead. One highlight: helping organize a full research symposium, including a poster presentation competition and a 3-Minute Thesis (3MT) competition, where researchers present their work in just three minutes. I helped run the whole symposium and reached out to judges and participants to bring it all together.</p>
+                    </div>
+                </div>
+
+                <div class="story-item">
+                    <button class="story-header" onclick="toggleStory(this)">
+                        <span class="story-num">07</span>
+                        <span class="story-title">Where Business Meets Product</span>
+                        <svg class="story-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="story-body">
+                        <p>Most recently, I worked as a Project Management Intern at eSurgi on Biostabilizer — a personalized, AI-enabled solution for chronic low back pain designed to improve outcomes and reduce the burden on physical therapists. My work centered on customer discovery: we reached out to over 200 physical therapists to validate whether the problem we were solving actually matched what clinicians experience day to day. Alongside that, I helped shape the value proposition, competitor analysis, go-to-market strategy, and financial projections into a coherent, investor-ready pitch deck — while coordinating a four-person intern team to keep everything on track. The biggest lesson: a good pitch isn't a collection of slides, it's a structured story where every claim needs evidence behind it, especially in healthcare.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="about-closing">
+                I am actively seeking opportunities in Data Engineering, Data &amp; Business Analysis, and Project Management where I can contribute to data-driven decision-making, process improvement, and high-quality delivery.
             </p>
         </div>
     </section>
+
+    <script>
+        function toggleStory(header) {
+            var item = header.parentElement;
+            item.classList.toggle('open');
+        }
+    </script>
     <section id="skills" class="skills section">
     <p class="section-eyebrow">02 / Skills</p>
     <h2 class="section-title">Skills & Tools</h2>

@@ -38,7 +38,7 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">Omkar Kalekar</div>
+        <div class="logo" id="siteLogo">Omkar Kalekar</div>
 
         <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open'); this.classList.toggle('active'); this.setAttribute('aria-expanded', this.classList.contains('active'));">
             <span></span>
@@ -62,27 +62,27 @@
 
         <div class="hero-content">
 
-            <p class="hero-eyebrow">Data Engineer &middot; Project Manager &middot; Product Manager</p>
+            <p class="hero-eyebrow stagger-item" style="--d:0">Data Engineer &middot; Project Manager &middot; Product Manager</p>
 
-            <h1>Omkar Kalekar</h1>
+            <h1 class="stagger-item" style="--d:1">Omkar Kalekar</h1>
 
-            <h2>Building Data-Driven Products, Projects & Analytical Solutions</h2>
+            <h2 class="stagger-item" style="--d:2">Building Data-Driven Products, Projects & Analytical Solutions</h2>
 
-            <div class="hero-photo">
+            <div class="hero-photo stagger-item" style="--d:3">
                 <img src="images/profile.JPG" alt="Omkar Kalekar">
             </div>
 
-            <p class="hero-location">
+            <p class="hero-location stagger-item" style="--d:4">
                 <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 Based in Baltimore, MD (open to relocate)
             </p>
 
-            <p class="hero-tagline">
+            <p class="hero-tagline stagger-item" style="--d:5">
                 Leveraging data, technology, and business strategy to transform ideas into actionable insights,
                 smarter workflows, and high-impact business solutions.
             </p>
 
-            <div class="hero-badges">
+            <div class="hero-badges stagger-item" style="--d:6">
                 <span>
                     <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
                     MS Information Systems @ UMBC
@@ -97,11 +97,11 @@
                 </span>
             </div>
 
-            <p class="hero-open">
+            <p class="hero-open stagger-item" style="--d:7">
                 Seeking Data Engineer • Project Manager • Product Manager roles
             </p>
 
-            <div class="hero-buttons">
+            <div class="hero-buttons stagger-item" style="--d:8">
                 <a href="resume/Omkar_Kalekar_Resume.pdf" target="_blank" class="btn primary">View Resume</a>
                 <a href="https://github.com/OmkarK23" target="_blank" class="btn secondary">GitHub</a>
                 <a href="https://www.linkedin.com/in/omkar-kalekar" target="_blank" class="btn secondary">LinkedIn</a>
@@ -121,13 +121,13 @@
                 <p class="about-intro-eyebrow">My Journey</p>
                 <p class="about-intro">
                     A small-town start, a few borders crossed, and a growing pull toward data, leadership, and building things that matter.
-                    Here's how I got here: chapter by chapter.
+                    Here's how I got here — chapter by chapter.
                 </p>
             </div>
 
             <div class="story-accordion">
 
-                <div class="story-item open" data-num="01">
+                <div class="story-item open reveal" data-num="01">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">01</span>
                         <span class="story-title">Where It Started</span>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="02">
+                <div class="story-item reveal" data-num="02">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">02</span>
                         <span class="story-title">The First Dataset</span>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="03">
+                <div class="story-item reveal" data-num="03">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">03</span>
                         <span class="story-title">Learning to Lead</span>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="04">
+                <div class="story-item reveal" data-num="04">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">04</span>
                         <span class="story-title">Between Two Sides</span>
@@ -171,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="05">
+                <div class="story-item reveal" data-num="05">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">05</span>
                         <span class="story-title">A New Chapter</span>
@@ -182,7 +182,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="06">
+                <div class="story-item reveal" data-num="06">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">06</span>
                         <span class="story-title">Back to Leading</span>
@@ -193,7 +193,7 @@
                     </div>
                 </div>
 
-                <div class="story-item" data-num="07">
+                <div class="story-item reveal" data-num="07">
                     <button class="story-header" onclick="toggleStory(this)">
                         <span class="story-num">07</span>
                         <span class="story-title">Where Business Meets Product</span>
@@ -225,7 +225,7 @@
 
     <div class="skills-groups">
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:0">
             <h3 class="skill-group-title">Languages & Databases</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -245,7 +245,7 @@
             </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:1">
             <h3 class="skill-group-title">Data Engineering & Cloud</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -268,7 +268,7 @@
             </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:2">
             <h3 class="skill-group-title">Analytics & BI</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -287,7 +287,7 @@
             </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:3">
             <h3 class="skill-group-title">AI & Machine Learning</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -305,7 +305,7 @@
             </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:4">
             <h3 class="skill-group-title">Product & Project Management</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -326,7 +326,7 @@
             </div>
         </div>
 
-        <div class="skill-group">
+        <div class="skill-group reveal" style="--d:5">
             <h3 class="skill-group-title">Tools & Collaboration</h3>
             <div class="skill-tier">
                 <span class="tier-label">Core</span>
@@ -941,6 +941,86 @@
 <footer>
     <p>© 2026 Omkar Kalekar. Built with HTML, CSS, and GitHub Pages.</p>
 </footer>
+
+<script>
+    (function () {
+        var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        var sections = [];
+        navLinks.forEach(function (link) {
+            var id = link.getAttribute('href').slice(1);
+            var section = document.getElementById(id);
+            if (section) sections.push({ link: link, section: section });
+        });
+
+        if ('IntersectionObserver' in window && sections.length) {
+            var navObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    var match = sections.find(function (s) { return s.section === entry.target; });
+                    if (!match) return;
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(function (l) { l.classList.remove('active'); });
+                        match.link.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+            sections.forEach(function (s) { navObserver.observe(s.section); });
+        }
+
+        function magnetize(el, strength) {
+            el.addEventListener('mousemove', function (e) {
+                var r = el.getBoundingClientRect();
+                var x = (e.clientX - r.left - r.width / 2) * strength;
+                var y = (e.clientY - r.top - r.height / 2) * strength;
+                el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+            });
+            el.addEventListener('mouseleave', function () {
+                el.style.transform = 'translate(0,0)';
+            });
+        }
+
+        var logo = document.getElementById('siteLogo');
+        if (logo) magnetize(logo, 0.25);
+
+        document.querySelectorAll('.btn').forEach(function (btn) {
+            magnetize(btn, 0.25);
+        });
+
+        document.querySelectorAll('.skill-pill').forEach(function (pill) {
+            pill.addEventListener('click', function (e) {
+                var r = pill.getBoundingClientRect();
+                var ripple = document.createElement('span');
+                ripple.className = 'pill-ripple';
+                var size = 14;
+                ripple.style.width = size + 'px';
+                ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - r.left - size / 2) + 'px';
+                ripple.style.top = (e.clientY - r.top - size / 2) + 'px';
+                pill.appendChild(ripple);
+                setTimeout(function () { ripple.remove(); }, 650);
+            });
+        });
+
+        if ('IntersectionObserver' in window) {
+            var revealObserver = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                revealObserver.observe(el);
+            });
+        } else {
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                el.classList.add('in-view');
+            });
+        }
+    })();
+</script>
 </body>
 
 </html>

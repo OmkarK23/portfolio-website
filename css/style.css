@@ -1491,6 +1491,13 @@ footer {
     bottom: 6px;
     width: 2px;
     background: rgba(93, 202, 165, 0.25);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 1.4s ease;
+}
+
+.timeline.in-view::before {
+    transform: scaleY(1);
 }
 
 .timeline-item {
@@ -1511,6 +1518,22 @@ footer {
     border-radius: 50%;
     background: var(--gold);
     box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+}
+
+.timeline-item.in-view .timeline-dot {
+    animation: dotPulse 1s ease-out calc(var(--d, 0) * 0.15s + 0.3s);
+}
+
+@keyframes dotPulse {
+    0% {
+        box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+    }
+    50% {
+        box-shadow: 0 0 0 12px rgba(93, 202, 165, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+    }
 }
 
 .timeline-date {

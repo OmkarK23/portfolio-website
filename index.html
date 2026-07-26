@@ -372,19 +372,19 @@
 
                 <div class="project-metrics">
                     <div class="metric-card metric-databricks">
-                        <span class="metric-value">8,500</span>
+                        <span class="metric-value count-up">8,500</span>
                         <span class="metric-label">Students</span>
                     </div>
                     <div class="metric-card metric-databricks">
-                        <span class="metric-value">147K+</span>
+                        <span class="metric-value count-up">147K+</span>
                         <span class="metric-label">Enrollments</span>
                     </div>
                     <div class="metric-card metric-databricks">
-                        <span class="metric-value">7.5M</span>
+                        <span class="metric-value count-up">7.5M</span>
                         <span class="metric-label">LMS Events</span>
                     </div>
                     <div class="metric-card metric-databricks">
-                        <span class="metric-value">13+</span>
+                        <span class="metric-value count-up">13+</span>
                         <span class="metric-label">Gold Views</span>
                     </div>
                 </div>
@@ -421,15 +421,15 @@
 
                 <div class="project-metrics">
                     <div class="metric-card metric-finops">
-                        <span class="metric-value">$2.1M+</span>
+                        <span class="metric-value count-up">$2.1M+</span>
                         <span class="metric-label">Spend Analyzed</span>
                     </div>
                     <div class="metric-card metric-finops">
-                        <span class="metric-value">$420K+</span>
+                        <span class="metric-value count-up">$420K+</span>
                         <span class="metric-label">Waste Identified</span>
                     </div>
                     <div class="metric-card metric-finops">
-                        <span class="metric-value">$278K+</span>
+                        <span class="metric-value count-up">$278K+</span>
                         <span class="metric-label">Savings Potential</span>
                     </div>
                     <div class="metric-card metric-finops">
@@ -609,7 +609,7 @@
     <div class="timeline">
 
         <!-- eSurgi -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="--d:0">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Feb 2026 – May 2026</div>
 
@@ -636,7 +636,7 @@
         </div>
 
         <!-- Weatherford -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="--d:1">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Jun 2023 – Jun 2024</div>
 
@@ -662,7 +662,7 @@
         </div>
 
         <!-- GEARS -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="--d:2">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Jul 2025 – May 2026</div>
 
@@ -687,7 +687,7 @@
         </div>
 
         <!-- TCR -->
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="--d:3">
             <div class="timeline-dot"></div>
             <div class="timeline-date">Jan 2022 – Apr 2022</div>
 
@@ -1013,6 +1013,68 @@
 
             document.querySelectorAll('.reveal').forEach(function (el) {
                 revealObserver.observe(el);
+            });
+
+            var timelineEl = document.querySelector('.timeline');
+            if (timelineEl) {
+                var lineObserver = new IntersectionObserver(function (entries, obs) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                lineObserver.observe(timelineEl);
+            }
+
+            function animateCount(el) {
+                var text = el.textContent.trim();
+                var match = text.match(/^([^\d]*)([\d,.]+)(.*)$/);
+                if (!match) return;
+                var prefix = match[1];
+                var numStr = match[2];
+                var suffix = match[3];
+                var hasComma = numStr.indexOf(',') !== -1;
+                var decimals = (numStr.split('.')[1] || '').length;
+                var target = parseFloat(numStr.replace(/,/g, ''));
+                if (isNaN(target)) return;
+                var duration = 1300;
+                var startTime = null;
+
+                function step(ts) {
+                    if (!startTime) startTime = ts;
+                    var progress = Math.min((ts - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    var current = target * eased;
+                    var display = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toString();
+                    if (hasComma) {
+                        display = Number(display).toLocaleString(undefined, {
+                            minimumFractionDigits: decimals,
+                            maximumFractionDigits: decimals
+                        });
+                    }
+                    el.textContent = prefix + display + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        el.textContent = prefix + numStr + suffix;
+                    }
+                }
+                requestAnimationFrame(step);
+            }
+
+            var countObserver = new IntersectionObserver(function (entries, obs) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        animateCount(entry.target);
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+
+            document.querySelectorAll('.count-up').forEach(function (el) {
+                countObserver.observe(el);
             });
         } else {
             document.querySelectorAll('.reveal').forEach(function (el) {

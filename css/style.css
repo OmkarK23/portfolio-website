@@ -1,20 +1,20 @@
 /* ==============================
    Omkar Kalekar Portfolio Theme
-   Matte Black + Dark Teal + White Accent
+   Deep Space Blue + White Accent
    Product / Project Management Focused
 ================================= */
 
 :root {
-    --black: #0A1612;
-    --black-soft: #101E1A;
-    --black-card: #132621;
-    --navy: #0F6E56;
-    --blue: #1D9E75;
-    --blue-dark: #157A5C;
-    --gold: #5DCAA5;
-    --gold-soft: #9FE1CB;
-    --red: #1D9E75;
-    --red-soft: #5DCAA5;
+    --black: #060B17;
+    --black-soft: #0C1524;
+    --black-card: #101C30;
+    --navy: #1E3A8A;
+    --blue: #2563EB;
+    --blue-dark: #1D4ED8;
+    --gold: #60A5FA;
+    --gold-soft: #93C5FD;
+    --red: #2563EB;
+    --red-soft: #60A5FA;
     --white: #FFFFFF;
     --text-light: #F9FAFB;
     --text-muted: #CBD5E1;
@@ -38,7 +38,7 @@ html {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    background: #0A1612;
+    background: #060B17;
 }
 
 .star {
@@ -63,12 +63,12 @@ html {
 }
 
 #constellations circle {
-    fill: #7FE0BC;
-    filter: drop-shadow(0 0 4px rgba(93, 202, 165, 0.8));
+    fill: #7DD3FC;
+    filter: drop-shadow(0 0 4px rgba(96, 165, 250, 0.8));
 }
 
 #constellations line {
-    stroke: rgba(93, 202, 165, 0.55);
+    stroke: rgba(96, 165, 250, 0.55);
     stroke-width: 1.4;
 }
 
@@ -86,8 +86,8 @@ html {
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #7FE0BC;
-    box-shadow: 0 0 5px 1px rgba(93, 202, 165, 0.75);
+    background: #7DD3FC;
+    box-shadow: 0 0 5px 1px rgba(96, 165, 250, 0.75);
     opacity: 1;
     pointer-events: none;
     z-index: 999;
@@ -105,7 +105,7 @@ footer {
 
 body {
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    background: #0A1612;
+    background: #060B17;
 
     color: #ffffff;
     color: var(--text-light);
@@ -293,7 +293,7 @@ body {
     position: absolute;
     inset: -12px;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, rgba(93, 202, 165, 0.35), transparent 40%);
+    background: conic-gradient(from 0deg, rgba(96, 165, 250, 0.35), transparent 40%);
     animation: radarSpin 3.5s linear infinite;
 }
 
@@ -341,7 +341,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid var(--gold);
-    box-shadow: 0 0 40px rgba(29, 158, 117, 0.35);
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.35);
 }
 
 .hero-photo img {
@@ -393,13 +393,13 @@ body {
     border-radius: 50%;
     overflow: hidden;
     border: 4px solid var(--gold);
-    box-shadow: 0 0 28px rgba(29, 158, 117, 0.35);
+    box-shadow: 0 0 28px rgba(37, 99, 235, 0.35);
     transition: all 0.35s ease;
 }
 
 .profile-circle:hover {
     transform: scale(1.04);
-    box-shadow: 0 0 34px rgba(93, 202, 165, 0.35);
+    box-shadow: 0 0 34px rgba(96, 165, 250, 0.35);
 }
 
 .profile-circle img {
@@ -456,8 +456,8 @@ h2 {
 }
 
 @keyframes pulsarBreath {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.45); }
-    50% { box-shadow: 0 0 0 7px rgba(93, 202, 165, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.45); }
+    50% { box-shadow: 0 0 0 7px rgba(96, 165, 250, 0); }
 }
 
 .primary {
@@ -475,7 +475,7 @@ h2 {
     color: var(--black);
     border-color: var(--gold);
     transform: translateY(-4px);
-    box-shadow: 0 12px 26px rgba(93, 202, 165, 0.28);
+    box-shadow: 0 12px 26px rgba(96, 165, 250, 0.28);
 }
 
 .secondary:hover {
@@ -595,20 +595,20 @@ h2 {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: rgba(93, 202, 165, 0.2);
+    background: rgba(96, 165, 250, 0.2);
     transition: background 0.4s ease, box-shadow 0.4s ease;
 }
 
 .rail-dot.lit {
-    background: #5DCAA5;
-    box-shadow: 0 0 6px 2px rgba(93, 202, 165, 0.55);
+    background: #60A5FA;
+    box-shadow: 0 0 6px 2px rgba(96, 165, 250, 0.55);
 }
 
 .rail-line {
     width: 2px;
     flex: 1;
     min-height: 20px;
-    background: rgba(93, 202, 165, 0.15);
+    background: rgba(96, 165, 250, 0.15);
 }
 
 @media (max-width: 900px) {
@@ -638,7 +638,7 @@ h2 {
 }
 
 .story-item.open {
-    border-bottom-color: rgba(93,202,165,0.4);
+    border-bottom-color: rgba(96,165,250,0.4);
 }
 
 .story-item::before {
@@ -649,7 +649,7 @@ h2 {
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 84px;
     font-weight: 800;
-    color: rgba(93, 202, 165, 0.06);
+    color: rgba(96, 165, 250, 0.06);
     line-height: 1;
     pointer-events: none;
     z-index: 0;
@@ -657,7 +657,7 @@ h2 {
 }
 
 .story-item.open::before {
-    color: rgba(93, 202, 165, 0.12);
+    color: rgba(96, 165, 250, 0.12);
 }
 
 .story-item.reveal {
@@ -848,8 +848,8 @@ h2 {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #7FE0BC;
-    box-shadow: 0 0 8px 3px rgba(93, 202, 165, 0.65);
+    background: #7DD3FC;
+    box-shadow: 0 0 8px 3px rgba(96, 165, 250, 0.65);
     offset-path: inset(0 round 18px);
     animation: cometOrbit 7s linear infinite;
     pointer-events: none;
@@ -963,26 +963,26 @@ h2 {
     transform: translateY(-5px);
 }
 .metric-finops {
-    background: rgba(93,202,165,.12);
-    color: #9FE1CB;
-    border-color: rgba(93,202,165,.25);
+    background: rgba(96,165,250,.12);
+    color: #93C5FD;
+    border-color: rgba(96,165,250,.25);
 }
 
 .metric-finops:hover {
-    background: #5DCAA5;
-    color: #0A1612;
-    box-shadow: 0 12px 25px rgba(93,202,165,.25);
+    background: #60A5FA;
+    color: #060B17;
+    box-shadow: 0 12px 25px rgba(96,165,250,.25);
 }
 .metric-ai {
-    background: rgba(29,158,117,.12);
-    color: #5DCAA5;
-    border-color: rgba(29,158,117,.25);
+    background: rgba(37,99,235,.12);
+    color: #60A5FA;
+    border-color: rgba(37,99,235,.25);
 }
 
 .metric-ai:hover {
-    background: #1D9E75;
+    background: #2563EB;
     color: white;
-    box-shadow: 0 12px 25px rgba(29,158,117,.25);
+    box-shadow: 0 12px 25px rgba(37,99,235,.25);
 }
 .metric-data {
     background: rgba(34,197,94,.12);
@@ -1017,8 +1017,8 @@ h2 {
 
 .github-btn {
     background: transparent;
-    color: #5DCAA5;
-    border: 1px solid #5DCAA5;
+    color: #60A5FA;
+    border: 1px solid #60A5FA;
     padding: 12px 22px;
     border-radius: 10px;
     text-decoration: none;
@@ -1081,7 +1081,7 @@ h2 {
     color: var(--black);
     border-color: var(--gold);
     transform: translateY(-3px);
-    box-shadow: 0 10px 22px rgba(29, 158, 117, 0.25);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.25);
     animation-play-state: paused;
 }
 
@@ -1234,7 +1234,7 @@ footer {
 .pill-ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(93,202,165,0.45);
+    background: rgba(96,165,250,0.45);
     transform: scale(0);
     animation: pillRippleAnim 0.6s ease-out;
     pointer-events: none;
@@ -1315,7 +1315,7 @@ footer {
 }
 /* Moving Skills Section */
 .skills {
-    background: #0A1612;
+    background: #060B17;
     overflow: hidden;
 }
 
@@ -1364,7 +1364,7 @@ footer {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 1px solid rgba(93, 202, 165, 0.6);
+    border: 1px solid rgba(96, 165, 250, 0.6);
     flex-shrink: 0;
     position: relative;
 }
@@ -1377,7 +1377,7 @@ footer {
     width: 2px;
     height: 2px;
     border-radius: 50%;
-    background: #7FE0BC;
+    background: #7DD3FC;
 }
 
 .title-node::after {
@@ -1387,7 +1387,7 @@ footer {
     left: 50%;
     width: 1px;
     height: 14px;
-    background: linear-gradient(rgba(93, 202, 165, 0.5), transparent);
+    background: linear-gradient(rgba(96, 165, 250, 0.5), transparent);
 }
 
 .flip-grid {
@@ -1443,8 +1443,8 @@ footer {
 }
 
 .flip-front {
-    background: #101E1A;
-    border: 1px solid rgba(93, 202, 165, 0.3);
+    background: #0C1524;
+    border: 1px solid rgba(96, 165, 250, 0.3);
 }
 
 .skill-icon {
@@ -1455,7 +1455,7 @@ footer {
 }
 
 .flip-card:hover .skill-icon {
-    color: #7FE0BC;
+    color: #7DD3FC;
     transform: scale(1.08);
 }
 
@@ -1471,14 +1471,14 @@ footer {
 }
 
 .flip-back {
-    background: #5DCAA5;
+    background: #60A5FA;
     transform: rotateY(180deg);
     padding: 4px;
     text-align: center;
 }
 
 .flip-back span {
-    color: #04342C;
+    color: #062246;
     font-size: 10px;
     font-weight: 800;
     line-height: 1.2;
@@ -1509,7 +1509,7 @@ footer {
 }
 
 .skill-pill.tier-core {
-    background: rgba(93,202,165,0.14);
+    background: rgba(96,165,250,0.14);
     border: 1px solid var(--gold);
     font-weight: 700;
 }
@@ -1532,8 +1532,8 @@ footer {
     gap: 10px;
     white-space: nowrap;
 
-    background: #101E1A;
-    border: 1px solid rgba(93,202,165,0.35);
+    background: #0C1524;
+    border: 1px solid rgba(96,165,250,0.35);
 
     color: #F9FAFB;
 
@@ -1549,13 +1549,13 @@ footer {
 }
 
 .skill-pill:hover {
-    background: #9FE1CB;
-    color: #5DCAA5;
-    border-color: #5DCAA5;
+    background: #93C5FD;
+    color: #60A5FA;
+    border-color: #60A5FA;
     transform: translateY(-4px);
     box-shadow:
-        0 0 15px rgba(93,202,165,0.45),
-        0 0 30px rgba(93,202,165,0.25);
+        0 0 15px rgba(96,165,250,0.45),
+        0 0 30px rgba(96,165,250,0.25);
 }
 .skill-pill:hover span {
     color: #ffffff;
@@ -1607,7 +1607,7 @@ footer {
 }
 /* Education Section */
 .education {
-    background: #0A1612;
+    background: #060B17;
 }
 
 .education-grid {
@@ -1622,9 +1622,9 @@ footer {
     display: flex;
     align-items: center;
     gap: 28px;
-    background: #101E1A;
-    border: 1px solid rgba(93, 202, 165, 0.25);
-    border-left: 5px solid #5DCAA5;
+    background: #0C1524;
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-left: 5px solid #60A5FA;
     border-radius: 18px;
     padding: 30px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
@@ -1638,7 +1638,7 @@ footer {
     position: absolute;
     width: 120px;
     height: 120px;
-    background: rgba(29, 158, 117, 0.08);
+    background: rgba(37, 99, 235, 0.08);
     border-radius: 50%;
     right: -35px;
     top: -35px;
@@ -1646,8 +1646,8 @@ footer {
 
 .education-card:hover {
     transform: translateY(-8px);
-    border-color: #5DCAA5;
-    box-shadow: 0 18px 40px rgba(93,202,165,0.16);
+    border-color: #60A5FA;
+    box-shadow: 0 18px 40px rgba(96,165,250,0.16);
 }
 
 .edu-logo {
@@ -1680,7 +1680,7 @@ footer {
 }
 
 .edu-content h4 {
-    color: #5DCAA5;
+    color: #60A5FA;
     font-size: 18px;
     margin-bottom: 8px;
 }
@@ -1700,8 +1700,8 @@ footer {
 }
 
 .edu-tags span {
-    background: rgba(29, 158, 117, 0.18);
-    border: 1px solid rgba(29, 158, 117, 0.35);
+    background: rgba(37, 99, 235, 0.18);
+    border: 1px solid rgba(37, 99, 235, 0.35);
     color: #BFDBFE;
     padding: 8px 12px;
     border-radius: 999px;
@@ -1710,9 +1710,9 @@ footer {
 }
 
 .edu-tags span:last-child {
-    background: rgba(29, 158, 117, 0.12);
-    border-color: rgba(29, 158, 117, 0.35);
-    color: #5DCAA5;
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.35);
+    color: #60A5FA;
 }
 
 @media (max-width: 700px) {
@@ -1749,9 +1749,9 @@ footer {
     justify-content: center;
     gap: 8px;
     text-align: center;
-    background: #101E1A;
-    color: #5DCAA5;
-    border: 1px solid rgba(93,202,165,0.45);
+    background: #0C1524;
+    color: #60A5FA;
+    border: 1px solid rgba(96,165,250,0.45);
     padding: 12px 18px;
     border-radius: 999px;
     font-weight: 700;
@@ -1759,14 +1759,14 @@ footer {
 }
 
 .hero-open {
-    color: #5DCAA5;
+    color: #60A5FA;
     font-size: 18px;
     font-weight: 800;
     margin: 18px 0 30px;
 }
 .company-link {
     display: inline-block;
-    color: #5DCAA5;
+    color: #60A5FA;
     text-decoration: none;
     font-weight: 700;
     margin-bottom: 10px;
@@ -1781,8 +1781,8 @@ footer {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 18px;
-    background: #5DCAA5;
-    color: #0A1612;
+    background: #60A5FA;
+    color: #060B17;
     text-decoration: none;
     font-weight: 700;
     border-radius: 8px;
@@ -1822,9 +1822,9 @@ footer {
 
 .experience-tag {
     display: inline-block;
-    background: rgba(29,158,117,0.15);
-    color: #5DCAA5;
-    border: 1px solid rgba(29,158,117,0.3);
+    background: rgba(37,99,235,0.15);
+    color: #60A5FA;
+    border: 1px solid rgba(37,99,235,0.3);
     padding: 6px 12px;
     border-radius: 999px;
     font-size: 13px;
@@ -1852,7 +1852,7 @@ footer {
     top: 6px;
     bottom: 6px;
     width: 2px;
-    background: rgba(93, 202, 165, 0.25);
+    background: rgba(96, 165, 250, 0.25);
     transform-origin: top;
     transform: scaleY(0);
     transition: transform 1.4s ease;
@@ -1879,7 +1879,7 @@ footer {
     height: 12px;
     border-radius: 50%;
     background: var(--gold);
-    box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
 }
 
 .timeline-item.in-view .timeline-dot {
@@ -1888,13 +1888,13 @@ footer {
 
 @keyframes dotPulse {
     0% {
-        box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+        box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
     }
     50% {
-        box-shadow: 0 0 0 12px rgba(93, 202, 165, 0);
+        box-shadow: 0 0 0 12px rgba(96, 165, 250, 0);
     }
     100% {
-        box-shadow: 0 0 0 4px rgba(93, 202, 165, 0.18);
+        box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
     }
 }
 
@@ -1907,7 +1907,7 @@ footer {
 }
 
 .timeline-body {
-    background: linear-gradient(145deg, #101E1A, #070B18);
+    background: linear-gradient(145deg, #0C1524, #070B18);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 14px;
     padding: 22px 24px;
@@ -2003,7 +2003,7 @@ footer {
     flex-shrink: 0;
     border-radius: 50%;
     background: var(--gold);
-    box-shadow: 0 0 4px 1px rgba(93, 202, 165, 0.6);
+    box-shadow: 0 0 4px 1px rgba(96, 165, 250, 0.6);
 }
 
 .project-tags span:hover {
@@ -2027,7 +2027,7 @@ footer {
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(93,202,165,0.35),
+        rgba(96,165,250,0.35),
         transparent
     );
 }
@@ -2061,7 +2061,7 @@ footer {
 }
 
 .nav-links a:hover {
-    color: #5DCAA5;
+    color: #60A5FA;
 }
 
 .profile-circle {
@@ -2070,10 +2070,10 @@ footer {
 
 @keyframes profileGlow {
     from {
-        box-shadow: 0 0 24px rgba(29,158,117,0.25);
+        box-shadow: 0 0 24px rgba(37,99,235,0.25);
     }
     to {
-        box-shadow: 0 0 36px rgba(93,202,165,0.38);
+        box-shadow: 0 0 36px rgba(96,165,250,0.38);
     }
 }
 
@@ -2101,7 +2101,7 @@ footer {
 .skill-pill:hover,
 .hero-badges span:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(93,202,165,0.18);
+    box-shadow: 0 10px 24px rgba(96,165,250,0.18);
 }
 
 .project-card h3,
@@ -2156,7 +2156,7 @@ footer {
 }
 
 .contact-intro h3 {
-    color: #5DCAA5;
+    color: #60A5FA;
     font-size: 28px;
     margin-bottom: 18px;
 }
@@ -2180,13 +2180,13 @@ footer {
 
 .coffee-btn {
     background: transparent;
-    color: #5DCAA5;
-    border-color: #5DCAA5;
+    color: #60A5FA;
+    border-color: #60A5FA;
 }
 
 .coffee-btn:hover {
-    background: #5DCAA5;
-    color: #0A1612;
+    background: #60A5FA;
+    color: #060B17;
 }
 
 @media (max-width: 800px) {
@@ -2197,7 +2197,7 @@ footer {
 }
 /* Semi-transparent section overlay so the fixed starfield shows through, while keeping text readable */
 html {
-    background: #0A1612;
+    background: #060B17;
 }
 
 body {
@@ -2222,7 +2222,7 @@ body {
 .experience-card,
 .education-card {
     background:
-        linear-gradient(145deg, #101E1A, #070B18) !important;
+        linear-gradient(145deg, #0C1524, #070B18) !important;
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 12px 35px rgba(0,0,0,0.45);
 }
@@ -2268,7 +2268,7 @@ body {
 
 .cert-card{
 
-    background:#101E1A;
+    background:#0C1524;
 
     border-radius:18px;
 
@@ -2276,7 +2276,7 @@ body {
 
     text-align:center;
 
-    border:1px solid rgba(93,202,165,.2);
+    border:1px solid rgba(96,165,250,.2);
 
     transition:.35s ease;
 
@@ -2286,9 +2286,9 @@ body {
 
     transform:translateY(-8px);
 
-    border-color:#5DCAA5;
+    border-color:#60A5FA;
 
-    box-shadow:0 20px 40px rgba(93,202,165,.15);
+    box-shadow:0 20px 40px rgba(96,165,250,.15);
 
 }
 
@@ -2314,7 +2314,7 @@ body {
 
 .cert-card p{
 
-    color:#5DCAA5;
+    color:#60A5FA;
 
     font-weight:600;
 
@@ -2344,9 +2344,9 @@ body {
 
     background:transparent;
 
-    color:#5DCAA5;
+    color:#60A5FA;
 
-    border:1.5px solid #5DCAA5;
+    border:1.5px solid #60A5FA;
 
     text-decoration:none;
 
@@ -2362,9 +2362,9 @@ body {
 
 .cert-btn:hover{
 
-    background:#5DCAA5;
+    background:#60A5FA;
 
-    color:#0A1612;
+    color:#060B17;
 
     animation-play-state: paused;
 

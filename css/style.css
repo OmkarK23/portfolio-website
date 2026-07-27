@@ -1432,20 +1432,27 @@ footer {
     border: 1px solid rgba(93, 202, 165, 0.3);
 }
 
+.skill-icon {
+    width: 50%;
+    height: 50%;
+    color: var(--gold);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.flip-card:hover .skill-icon {
+    color: #7FE0BC;
+    transform: scale(1.08);
+}
+
 .flip-front img {
     width: 55%;
     height: 55%;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.icon-fallback {
-    color: var(--gold);
-    font-size: 9px;
-    font-weight: 800;
-    letter-spacing: 0.3px;
-    text-align: center;
-    line-height: 1.2;
-    padding: 0 4px;
+.flip-card:hover .flip-front img {
+    transform: scale(1.08);
 }
 
 .flip-back {

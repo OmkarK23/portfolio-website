@@ -1438,6 +1438,16 @@ footer {
     object-fit: contain;
 }
 
+.icon-fallback {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 4px;
+}
+
 .flip-back {
     background: #5DCAA5;
     transform: rotateY(180deg);

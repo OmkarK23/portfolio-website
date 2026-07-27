@@ -955,18 +955,22 @@
             var vh = window.innerHeight;
 
             var starCount = 130;
+            var starData = [];
             for (var i = 0; i < starCount; i++) {
                 var star = document.createElement('div');
                 var size = Math.random() * 2.2 + 1.5;
+                var leftPct = Math.random() * 100;
+                var topPct = Math.random() * 100;
                 star.className = 'star';
                 star.style.width = size + 'px';
                 star.style.height = size + 'px';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
+                star.style.left = leftPct + '%';
+                star.style.top = topPct + '%';
                 star.style.opacity = (Math.random() * 0.4 + 0.55).toFixed(2);
                 star.style.animationDuration = (Math.random() * 2.5 + 1.8) + 's';
                 star.style.animationDelay = (Math.random() * 3) + 's';
                 spaceBg.appendChild(star);
+                starData.push({ el: star, px: (leftPct / 100) * vw, py: (topPct / 100) * vh });
             }
 
             var svg = document.getElementById('constellations');
@@ -1003,6 +1007,74 @@
                     dot.setAttribute('r', 1.6);
                     svg.appendChild(dot);
                 });
+            });
+
+            // Shooting stars: periodic streak crossing the sky
+            function shootingStar() {
+                var star = document.createElement('div');
+                var startX = Math.random() * 60;
+                var startY = Math.random() * 45;
+                star.className = 'shooting-star';
+                star.style.left = startX + '%';
+                star.style.top = startY + '%';
+                spaceBg.appendChild(star);
+                star.animate([
+                    { opacity: 0, transform: 'rotate(35deg) translateX(0)' },
+                    { opacity: 1, offset: 0.08 },
+                    { opacity: 0, transform: 'rotate(35deg) translateX(320px)' }
+                ], { duration: 1100, easing: 'ease-out' });
+                setTimeout(function () { star.remove(); }, 1100);
+            }
+            setInterval(shootingStar, 6000);
+            setTimeout(shootingStar, 1500);
+
+            // Cursor-proximity glow: nearby stars scale up as the pointer approaches
+            var glowTicking = false;
+            var lastMX = -9999, lastMY = -9999;
+            document.addEventListener('mousemove', function (e) {
+                lastMX = e.clientX;
+                lastMY = e.clientY;
+                if (!glowTicking) {
+                    glowTicking = true;
+                    requestAnimationFrame(function () {
+                        var radius = 150;
+                        starData.forEach(function (s) {
+                            var dx = s.px - lastMX;
+                            var dy = s.py - lastMY;
+                            var dist = Math.sqrt(dx * dx + dy * dy);
+                            if (dist < radius) {
+                                var factor = 1 - dist / radius;
+                                s.el.style.transform = 'scale(' + (1 + factor * 2.6) + ')';
+                            } else {
+                                s.el.style.transform = 'scale(1)';
+                            }
+                        });
+                        glowTicking = false;
+                    });
+                }
+            });
+
+            // Click spark burst (skipped on interactive elements)
+            document.addEventListener('click', function (e) {
+                if (e.target.closest('a, button, .skill-pill, .story-header, input, textarea, .nav-toggle')) return;
+                var x = e.clientX, y = e.clientY;
+                for (var p = 0; p < 10; p++) {
+                    var particle = document.createElement('div');
+                    var angle = (Math.PI * 2 / 10) * p + Math.random() * 0.3;
+                    var dist = 30 + Math.random() * 25;
+                    var dx = Math.cos(angle) * dist, dy = Math.sin(angle) * dist;
+                    particle.className = 'spark-particle';
+                    particle.style.left = x + 'px';
+                    particle.style.top = y + 'px';
+                    spaceBg.appendChild(particle);
+                    (function (particle, dx, dy) {
+                        requestAnimationFrame(function () {
+                            particle.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+                            particle.style.opacity = '0';
+                        });
+                        setTimeout(function () { particle.remove(); }, 700);
+                    })(particle, dx, dy);
+                }
             });
         }
 

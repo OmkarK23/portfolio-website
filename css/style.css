@@ -2211,8 +2211,9 @@ body {
 .experience,
 .education,
 .contact,
+.certifications,
 .hero {
-    background: rgba(6, 11, 23, 0.74) !important;
+    background: transparent !important;
 }
 
 /* Keep cards dark/glossy */

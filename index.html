@@ -37,6 +37,10 @@
 
 <body>
 
+    <div id="space-bg" aria-hidden="true">
+        <svg id="constellations" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
     <nav class="navbar">
         <div class="logo" id="siteLogo">Omkar Kalekar</div>
 
@@ -944,6 +948,64 @@
 
 <script>
     (function () {
+        // Space background: twinkling starfield + constellation lines
+        var spaceBg = document.getElementById('space-bg');
+        if (spaceBg) {
+            var vw = window.innerWidth;
+            var vh = window.innerHeight;
+
+            var starCount = 130;
+            for (var i = 0; i < starCount; i++) {
+                var star = document.createElement('div');
+                var size = Math.random() * 2 + 1;
+                star.className = 'star';
+                star.style.width = size + 'px';
+                star.style.height = size + 'px';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.opacity = (Math.random() * 0.5 + 0.35).toFixed(2);
+                star.style.animationDuration = (Math.random() * 2.5 + 1.8) + 's';
+                star.style.animationDelay = (Math.random() * 3) + 's';
+                spaceBg.appendChild(star);
+            }
+
+            var svg = document.getElementById('constellations');
+            svg.setAttribute('viewBox', '0 0 ' + vw + ' ' + vh);
+
+            var clusters = [
+                { x: vw * 0.08, y: vh * 0.15, spread: 90 },
+                { x: vw * 0.85, y: vh * 0.22, spread: 100 },
+                { x: vw * 0.15, y: vh * 0.78, spread: 85 },
+                { x: vw * 0.88, y: vh * 0.72, spread: 95 }
+            ];
+
+            clusters.forEach(function (cluster) {
+                var pointCount = 4 + Math.floor(Math.random() * 2);
+                var points = [];
+                for (var p = 0; p < pointCount; p++) {
+                    points.push({
+                        x: cluster.x + (Math.random() - 0.5) * cluster.spread,
+                        y: cluster.y + (Math.random() - 0.5) * cluster.spread
+                    });
+                }
+                for (var l = 0; l < points.length - 1; l++) {
+                    var line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                    line.setAttribute('x1', points[l].x);
+                    line.setAttribute('y1', points[l].y);
+                    line.setAttribute('x2', points[l + 1].x);
+                    line.setAttribute('y2', points[l + 1].y);
+                    svg.appendChild(line);
+                }
+                points.forEach(function (pt) {
+                    var dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                    dot.setAttribute('cx', pt.x);
+                    dot.setAttribute('cy', pt.y);
+                    dot.setAttribute('r', 1.6);
+                    svg.appendChild(dot);
+                });
+            });
+        }
+
         var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
         var sections = [];
         navLinks.forEach(function (link) {

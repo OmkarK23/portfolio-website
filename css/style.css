@@ -31,6 +31,53 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Fixed space background: starfield + constellations, sits behind all content */
+#space-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background: #0A1612;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.15; }
+    50% { opacity: 1; }
+}
+
+#constellations {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#constellations circle {
+    fill: #5DCAA5;
+}
+
+#constellations line {
+    stroke: rgba(93, 202, 165, 0.3);
+    stroke-width: 1;
+}
+
+/* Everything else needs to render above the fixed starfield */
+.navbar,
+main,
+section,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
 body {
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     background: #0A1612;
@@ -1826,8 +1873,15 @@ footer {
         text-align: center;
     }
 }
-/* Flat, seamless background across the entire site (no corner gradients — they created a visible banding artifact on wide/tall sections) */
-body,
+/* Semi-transparent section overlay so the fixed starfield shows through, while keeping text readable */
+html {
+    background: #0A1612;
+}
+
+body {
+    background: transparent !important;
+}
+
 .section,
 .about,
 .skills,
@@ -1836,7 +1890,7 @@ body,
 .education,
 .contact,
 .hero {
-    background: #0A1612 !important;
+    background: rgba(10, 22, 18, 0.82) !important;
 }
 
 /* Keep cards dark/glossy */

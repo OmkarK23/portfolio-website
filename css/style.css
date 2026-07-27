@@ -45,11 +45,12 @@ html {
     position: absolute;
     border-radius: 50%;
     background: #ffffff;
+    box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.55);
     animation: twinkle ease-in-out infinite;
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.15; }
+    0%, 100% { opacity: 0.45; }
     50% { opacity: 1; }
 }
 
@@ -61,12 +62,13 @@ html {
 }
 
 #constellations circle {
-    fill: #5DCAA5;
+    fill: #7FE0BC;
+    filter: drop-shadow(0 0 4px rgba(93, 202, 165, 0.8));
 }
 
 #constellations line {
-    stroke: rgba(93, 202, 165, 0.3);
-    stroke-width: 1;
+    stroke: rgba(93, 202, 165, 0.55);
+    stroke-width: 1.4;
 }
 
 /* Everything else needs to render above the fixed starfield */
@@ -1890,7 +1892,7 @@ body {
 .education,
 .contact,
 .hero {
-    background: rgba(10, 22, 18, 0.82) !important;
+    background: rgba(10, 22, 18, 0.74) !important;
 }
 
 /* Keep cards dark/glossy */

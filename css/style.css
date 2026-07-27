@@ -1330,6 +1330,10 @@ footer {
 }
 
 .skill-group-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 15px;
     font-weight: 600;
@@ -1339,6 +1343,113 @@ footer {
     margin-bottom: 16px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border-dark);
+}
+
+.title-node {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(93, 202, 165, 0.6);
+    flex-shrink: 0;
+    position: relative;
+}
+
+.title-node::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #7FE0BC;
+}
+
+.title-node::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 1px;
+    height: 14px;
+    background: linear-gradient(rgba(93, 202, 165, 0.5), transparent);
+}
+
+.flip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+    gap: 14px;
+}
+
+.flip-card {
+    width: 100%;
+    aspect-ratio: 1;
+    perspective: 500px;
+    cursor: pointer;
+    animation: iconTwinkle 3.4s ease-in-out infinite;
+}
+
+.flip-card:nth-child(3n+1) { animation-delay: 0s; }
+.flip-card:nth-child(3n+2) { animation-delay: 0.6s; }
+.flip-card:nth-child(3n+3) { animation-delay: 1.2s; }
+
+.flip-card:hover,
+.flip-card.flipped {
+    animation-play-state: paused;
+}
+
+@keyframes iconTwinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner,
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-front {
+    background: #101E1A;
+    border: 1px solid rgba(93, 202, 165, 0.3);
+}
+
+.flip-front img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+}
+
+.flip-back {
+    background: #5DCAA5;
+    transform: rotateY(180deg);
+    padding: 4px;
+    text-align: center;
+}
+
+.flip-back span {
+    color: #04342C;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .skill-group-pills {

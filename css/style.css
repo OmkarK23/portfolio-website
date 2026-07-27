@@ -394,6 +394,16 @@ h2 {
     font-weight: 700;
     background: transparent;
     transition: all 0.3s ease;
+    animation: pulsarBreath 2.6s ease-in-out infinite;
+}
+
+.btn:hover {
+    animation-play-state: paused;
+}
+
+@keyframes pulsarBreath {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.45); }
+    50% { box-shadow: 0 0 0 7px rgba(93, 202, 165, 0); }
 }
 
 .primary {
@@ -712,7 +722,14 @@ h2 {
 }
 
 .project-card {
-    background: var(--black-card);
+    background:
+        radial-gradient(1px 1px at 12% 20%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 32% 65%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1.5px 1.5px at 55% 30%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(1px 1px at 78% 55%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(1px 1px at 90% 80%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(1.5px 1.5px at 20% 88%, rgba(255,255,255,0.4), transparent),
+        var(--black-card);
     padding: 32px;
     border-radius: 18px;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
@@ -721,6 +738,23 @@ h2 {
     border-left: 5px solid var(--gold);
     position: relative;
     overflow: hidden;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7FE0BC;
+    box-shadow: 0 0 8px 3px rgba(93, 202, 165, 0.65);
+    offset-path: inset(0 round 18px);
+    animation: cometOrbit 7s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes cometOrbit {
+    to { offset-distance: 100%; }
 }
 
 .project-card::before {
@@ -935,6 +969,8 @@ h2 {
 
     min-width: 160px;
 
+    animation: pulsarBreath 2.6s ease-in-out infinite;
+
     transition: all 0.3s ease;
 }
 
@@ -944,6 +980,7 @@ h2 {
     border-color: var(--gold);
     transform: translateY(-3px);
     box-shadow: 0 10px 22px rgba(29, 158, 117, 0.25);
+    animation-play-state: paused;
 }
 
 /* Experience Section */
@@ -1039,6 +1076,7 @@ h2 {
     font-weight: 700;
     transition: all 0.3s ease;
     border: 1.5px solid var(--gold);
+    animation: pulsarBreath 2.6s ease-in-out infinite;
 }
 
 .contact-btn:hover {
@@ -1046,6 +1084,7 @@ h2 {
     color: var(--black);
     border-color: var(--gold);
     transform: translateY(-3px);
+    animation-play-state: paused;
 }
 
 /* Footer */
@@ -1688,29 +1727,36 @@ footer {
 }
 
 .project-tags span {
-    background: var(--black-card);
-    color: var(--gold);
-    border: 1px solid rgba(93,202,165,0.35);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-    padding: 6px 12px;
+    background: none;
+    color: var(--text-muted);
+    border: none;
 
-    border-radius: 4px;
+    padding: 4px 0;
 
     font-size: 12px;
     font-weight: 600;
 
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 
     cursor: default;
 }
 
+.project-tags span::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 4px 1px rgba(93, 202, 165, 0.6);
+}
+
 .project-tags span:hover {
-    background: rgba(93,202,165,0.12);
-    border-color: var(--gold);
-
-    transform: translateY(-2px);
-
-    box-shadow: none;
+    color: var(--gold);
 }
 /* ==============================
    Appearance Polish
@@ -2059,6 +2105,8 @@ body {
 
     transition:.3s;
 
+    animation: pulsarBreath 2.6s ease-in-out infinite;
+
 }
 
 .cert-btn:hover{
@@ -2066,6 +2114,8 @@ body {
     background:#5DCAA5;
 
     color:#0A1612;
+
+    animation-play-state: paused;
 
 }
 

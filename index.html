@@ -264,6 +264,11 @@
                 dot.classList.toggle('lit', item.classList.contains('open'));
             }
         }
+
+        function toggleMission(header) {
+            var item = header.parentElement;
+            item.classList.toggle('open');
+        }
     </script>
     <section id="skills" class="skills section">
     <p class="section-eyebrow">02 / Skills</p>
@@ -431,7 +436,7 @@
                 </div>
                 <div class="flip-card" tabindex="0" onclick="this.classList.toggle('flipped')">
                     <div class="flip-inner">
-                        <div class="flip-front"><img src="images/skills/Java.png" alt="Java"></div>
+                        <div class="flip-front"><img src="images/skills/java.png" alt="Java"></div>
                         <div class="flip-back"><span>Java</span></div>
                     </div>
                 </div>
@@ -636,25 +641,23 @@
     <div class="container">
 
         <p class="section-eyebrow">03 / Projects</p>
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Mission Log</h2>
 
-        <div class="projects-grid">
+        <div class="mission-log">
 
-            <div class="project-card case-file">
+            <div class="mission-item reveal open" style="--d:0">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 01 &middot; Analytics Engineering</span>
+                        <h3 class="mission-title">Student Success Intelligence Platform</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>An enterprise learning analytics platform centralizing academic, enrollment, attendance, and Blackboard LMS data into a scalable Databricks Lakehouse, enabling executive reporting and early risk detection for at-risk students.</p>
 
-                <div class="case-file-header">
-                    <span class="case-label">Case 01 — Analytics Engineering</span>
-                </div>
-
-                <h3>Student Success Intelligence Platform</h3>
-
-                <p>
-                    An enterprise learning analytics platform centralizing academic, enrollment, attendance, and
-                    Blackboard LMS data into a scalable Databricks Lakehouse — enabling executive reporting and
-                    early risk detection for at-risk students.
-                </p>
-
-                <div class="project-metrics">
+                    <div class="project-metrics">
                     <div class="metric-card metric-databricks">
                         <span class="metric-value count-up">8,500</span>
                         <span class="metric-label">Students</span>
@@ -671,39 +674,35 @@
                         <span class="metric-value count-up">13+</span>
                         <span class="metric-label">Gold Views</span>
                     </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Databricks</span>
+                        <span>Apache Spark</span>
+                        <span>Delta Lake</span>
+                        <span>Lakehouse</span>
+                        <span>Analytics Engineering</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; 7.5M+ LMS events unified into 13+ executive Gold views</p>
+
+                    <a href="https://github.com/OmkarK23/learning-analytics-lakehouse-platform" target="_blank" class="project-btn">View Project</a>
                 </div>
-
-                <div class="project-tags">
-                    <span>Databricks</span>
-                    <span>Apache Spark</span>
-                    <span>Delta Lake</span>
-                    <span>Lakehouse</span>
-                    <span>Analytics Engineering</span>
-                </div>
-
-                <p class="case-outcome">Outcome — 7.5M+ LMS events unified into 13+ executive Gold views</p>
-
-                <a href="https://github.com/OmkarK23/learning-analytics-lakehouse-platform"
-                target="_blank"
-                class="project-btn">
-                    View Project
-                </a>
             </div>
 
-            <div class="project-card case-file">
+            <div class="mission-item reveal" style="--d:1">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 02 &middot; Data Engineering</span>
+                        <h3 class="mission-title">Cloud FinOps Intelligence Platform</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>A serverless Cloud FinOps platform automating cloud cost analytics, optimization, forecasting, and executive reporting using AWS services and machine learning.</p>
 
-                <div class="case-file-header">
-                    <span class="case-label">Case 02 — Data Engineering</span>
-                </div>
-
-                <h3>Cloud FinOps Intelligence Platform</h3>
-
-                <p>
-                    A serverless Cloud FinOps platform automating cloud cost analytics, optimization, forecasting,
-                    and executive reporting using AWS services and machine learning.
-                </p>
-
-                <div class="project-metrics">
+                    <div class="project-metrics">
                     <div class="metric-card metric-finops">
                         <span class="metric-value count-up">$2.1M+</span>
                         <span class="metric-label">Spend Analyzed</span>
@@ -720,41 +719,35 @@
                         <span class="metric-value">AWS</span>
                         <span class="metric-label">Serverless</span>
                     </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>AWS</span>
+                        <span>FinOps</span>
+                        <span>Cloud Computing</span>
+                        <span>Streamlit</span>
+                        <span>Forecasting</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; $420K+ in cloud waste identified across $2.1M+ analyzed spend</p>
+
+                    <a href="https://github.com/OmkarK23/cloud-finops-intelligence-platform" target="_blank" class="project-btn">View Project</a>
                 </div>
-
-                <div class="project-tags">
-                    <span>AWS</span>
-                    <span>FinOps</span>
-                    <span>Cloud Computing</span>
-                    <span>Streamlit</span>
-                    <span>Forecasting</span>
-                </div>
-
-                <p class="case-outcome">Outcome — $420K+ in cloud waste identified across $2.1M+ analyzed spend</p>
-
-                <a href="https://github.com/OmkarK23/cloud-finops-intelligence-platform"
-                target="_blank"
-                class="project-btn">
-                View Project
-                </a>
-
             </div>
 
-            <div class="project-card case-file">
+            <div class="mission-item reveal" style="--d:2">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 03 &middot; Product / AI</span>
+                        <h3 class="mission-title">AI Event Planning & Engagement System</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>Led end-to-end design and deployment of an AI-powered event planning platform helping organizers improve attendance, optimize engagement strategy, and analyze attendee feedback using machine learning and NLP.</p>
 
-                <div class="case-file-header">
-                    <span class="case-label">Case 03 — Product / AI</span>
-                </div>
-
-                <h3>AI Event Planning & Engagement System</h3>
-
-                <p>
-                    Led end-to-end design and deployment of an AI-powered event planning platform helping
-                    organizers improve attendance, optimize engagement strategy, and analyze attendee feedback
-                    using machine learning and NLP.
-                </p>
-
-                <div class="project-metrics">
+                    <div class="project-metrics">
                     <div class="metric-card metric-ai">
                         <span class="metric-value">Attendance</span>
                         <span class="metric-label">Forecasting</span>
@@ -771,37 +764,35 @@
                         <span class="metric-value">Streamlit</span>
                         <span class="metric-label">Deployment</span>
                     </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Product Management</span>
+                        <span>Machine Learning</span>
+                        <span>NLP</span>
+                        <span>TextBlob</span>
+                        <span>Streamlit</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; Attendance forecasting and NLP feedback analysis shipped to production</p>
+
+                    <a href="https://github.com/OmkarK23/ai-event-planner.git" target="_blank" class="project-btn">View Project</a>
                 </div>
-
-                <div class="project-tags">
-                    <span>Product Management</span>
-                    <span>Machine Learning</span>
-                    <span>NLP</span>
-                    <span>TextBlob</span>
-                    <span>Streamlit</span>
-                </div>
-
-                <p class="case-outcome">Outcome — Attendance forecasting and NLP feedback analysis shipped to production</p>
-
-                <a href="https://github.com/OmkarK23/ai-event-planner.git" target="_blank" class="project-btn">
-                    View Project
-                </a>
             </div>
 
-            <div class="project-card case-file">
+            <div class="mission-item reveal" style="--d:3">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 04 &middot; Data Engineering</span>
+                        <h3 class="mission-title">Real-Time Weather & Utility Monitoring Pipeline</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>A real-time weather monitoring platform leveraging Kafka, PostgreSQL, and analytics dashboards to support operational visibility and risk monitoring.</p>
 
-                <div class="case-file-header">
-                    <span class="case-label">Case 04 — Data Engineering</span>
-                </div>
-
-                <h3>Real-Time Weather & Utility Monitoring Pipeline</h3>
-
-                <p>
-                    A real-time weather monitoring platform leveraging Kafka, PostgreSQL, and analytics dashboards
-                    to support operational visibility and risk monitoring.
-                </p>
-
-                <div class="project-metrics">
+                    <div class="project-metrics">
                     <div class="metric-card metric-data">
                         <span class="metric-value">Kafka</span>
                         <span class="metric-label">Streaming</span>
@@ -818,36 +809,34 @@
                         <span class="metric-value">Dashboard</span>
                         <span class="metric-label">Reporting</span>
                     </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Kafka</span>
+                        <span>Data Engineering</span>
+                        <span>ETL</span>
+                        <span>Streaming Analytics</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; 1,440+ weather & utility events processed daily via Kafka</p>
+
+                    <a href="https://github.com/OmkarK23/weather-utility-kafka-pipeline.git" target="_blank" class="project-btn">View Project</a>
                 </div>
-
-                <div class="project-tags">
-                    <span>Kafka</span>
-                    <span>Data Engineering</span>
-                    <span>ETL</span>
-                    <span>Streaming Analytics</span>
-                </div>
-
-                <p class="case-outcome">Outcome — 1,440+ weather &amp; utility events processed daily via Kafka</p>
-
-                <a href="https://github.com/OmkarK23/weather-utility-kafka-pipeline.git" target="_blank" class="project-btn">
-                    View Project
-                </a>
             </div>
 
-            <div class="project-card case-file">
+            <div class="mission-item reveal" style="--d:4">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 05 &middot; Machine Learning</span>
+                        <h3 class="mission-title">H1B Visa Outcome Prediction</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>A machine learning solution predicting H1B visa outcomes using historical application data and predictive modeling techniques.</p>
 
-                <div class="case-file-header">
-                    <span class="case-label">Case 05 — Machine Learning</span>
-                </div>
-
-                <h3>H1B Visa Outcome Prediction</h3>
-
-                <p>
-                    A machine learning solution predicting H1B visa outcomes using historical application data
-                    and predictive modeling techniques.
-                </p>
-
-                <div class="project-metrics">
+                    <div class="project-metrics">
                     <div class="metric-card metric-ml">
                         <span class="metric-value">Classification</span>
                         <span class="metric-label">Models</span>
@@ -864,20 +853,212 @@
                         <span class="metric-value">Scikit-Learn</span>
                         <span class="metric-label">Library</span>
                     </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Machine Learning</span>
+                        <span>Data Mining</span>
+                        <span>Predictive Analytics</span>
+                        <span>Classification</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; Classification models built on historical H1B application data</p>
+
+                    <a href="https://github.com/OmkarK23/H1B_Case_Prediction.git" target="_blank" class="project-btn">View Project</a>
                 </div>
+            </div>
 
-                <div class="project-tags">
-                    <span>Machine Learning</span>
-                    <span>Data Mining</span>
-                    <span>Predictive Analytics</span>
-                    <span>Classification</span>
+            <div class="mission-item reveal" style="--d:5">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 06 &middot; Web Development</span>
+                        <h3 class="mission-title">Portfolio Website (This Site)</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>Designed and built this entire portfolio from scratch in HTML, CSS, and vanilla JavaScript, no frameworks. Features a space-themed interactive background, flip-card skill grid, an accordion-based story timeline, and scroll-triggered animations throughout.</p>
+
+                    <div class="project-metrics">
+                    <div class="metric-card metric-web">
+                        <span class="metric-value">Zero</span>
+                        <span class="metric-label">Frameworks</span>
+                    </div>
+                    <div class="metric-card metric-web">
+                        <span class="metric-value">50</span>
+                        <span class="metric-label">Skills Cataloged</span>
+                    </div>
+                    <div class="metric-card metric-web">
+                        <span class="metric-value">7</span>
+                        <span class="metric-label">Sections Built</span>
+                    </div>
+                    <div class="metric-card metric-web">
+                        <span class="metric-value">100%</span>
+                        <span class="metric-label">Custom CSS/JS</span>
+                    </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML/CSS/JS</span>
+                        <span>UI/UX Design</span>
+                        <span>Animation</span>
+                        <span>Responsive Design</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; A fully custom, interactive portfolio built without any frontend framework</p>
+
+                    <a href="https://github.com/OmkarK23" target="_blank" class="project-btn">View Project</a>
                 </div>
+            </div>
 
-                <p class="case-outcome">Outcome — Classification models built on historical H1B application data</p>
+            <div class="mission-item reveal" style="--d:6">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 07 &middot; Machine Learning</span>
+                        <h3 class="mission-title">Movie Recommender System</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>Built a content-based movie recommendation engine trained on a dataset of 5,000+ movies. Using CountVectorizer and cosine similarity over movie metadata, the model recommends the 7 movies most similar to a title the user has already watched.</p>
 
-                 <a href="https://github.com/OmkarK23/H1B_Case_Prediction.git" target="_blank" class="project-btn">
-                    View Project
-                </a>
+                    <div class="project-metrics">
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">5,000+</span>
+                        <span class="metric-label">Movies</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Top 7</span>
+                        <span class="metric-label">Recommendations</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Cosine</span>
+                        <span class="metric-label">Similarity</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Content-Based</span>
+                        <span class="metric-label">Filtering</span>
+                    </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Cosine Similarity</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; Recommends the 7 most similar movies from a 5,000+ movie dataset</p>
+
+                    <a href="https://github.com/OmkarK23/Movie_Recommender.git" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="mission-item reveal" style="--d:7">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 08 &middot; Machine Learning</span>
+                        <h3 class="mission-title">Bangalore House Price Prediction</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>Built a house price prediction model trained on a Kaggle dataset of Bangalore home prices, comparing Linear Regression, Lasso, and Decision Tree Regressor with GridSearchCV to select the best-performing approach. Users get a price estimate by entering location, bedrooms, bathrooms, and square footage.</p>
+
+                    <div class="project-metrics">
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">~85%</span>
+                        <span class="metric-label">Accuracy</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">GridSearchCV</span>
+                        <span class="metric-label">Tuning</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">3</span>
+                        <span class="metric-label">Models Compared</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Kaggle</span>
+                        <span class="metric-label">Dataset</span>
+                    </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>Linear Regression</span>
+                        <span>GridSearchCV</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; Achieved roughly 85% prediction accuracy on Bangalore home prices</p>
+
+                    <a href="https://github.com/OmkarK23/House_Price_Prediction.git" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="mission-item reveal" style="--d:8">
+                <div class="mission-dot"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 09 &middot; Machine Learning</span>
+                        <h3 class="mission-title">Employee Attrition Analysis</h3>
+                    </div>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <p>Built an end-to-end pipeline predicting employee attrition, from exploratory data analysis through feature engineering to a Logistic Regression model with Lasso-based feature selection. The full notebook runs in under a minute.</p>
+
+                    <div class="project-metrics">
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">90%</span>
+                        <span class="metric-label">Accuracy</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Logistic</span>
+                        <span class="metric-label">Regression</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value">Lasso</span>
+                        <span class="metric-label">Feature Selection</span>
+                    </div>
+                    <div class="metric-card metric-ml">
+                        <span class="metric-value"><1 Min</span>
+                        <span class="metric-label">Runtime</span>
+                    </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Pandas</span>
+                        <span>Logistic Regression</span>
+                        <span>EDA</span>
+                    </div>
+
+                    <p class="case-outcome">Outcome &mdash; 90% prediction accuracy with a full pipeline that runs in under a minute</p>
+
+                    <a href="https://github.com/OmkarK23/Employee-Attiration-Analysis.git" target="_blank" class="project-btn">View Project</a>
+                </div>
+            </div>
+
+            <div class="mission-item mission-reserved reveal" style="--d:9">
+                <div class="mission-dot mission-dot-pulse"></div>
+                <div class="mission-header mission-header-static">
+                    <div class="mission-header-text">
+                        <span class="mission-label">MISSION 10 &middot; STATUS: IN TRANSIT</span>
+                        <h3 class="mission-title">Reserved for the Next Mission</h3>
+                    </div>
+                    <svg class="mission-chevron mission-chevron-static" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                </div>
+                <div class="mission-body mission-body-static">
+                    <p class="mission-reserved-text">Currently plotting a course. New coordinates incoming soon, check back for the next launch.</p>
+                </div>
             </div>
 
         </div>

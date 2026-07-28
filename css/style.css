@@ -897,6 +897,213 @@ h2 {
     margin: 4px 0 18px;
 }
 
+/* Mission Log (Projects section) */
+.mission-log {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding-left: 34px;
+}
+
+.mission-log::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: rgba(96, 165, 250, 0.22);
+}
+
+.mission-item {
+    position: relative;
+    margin-bottom: 22px;
+}
+
+.mission-item:last-child {
+    margin-bottom: 0;
+}
+
+.mission-dot {
+    position: absolute;
+    left: -34px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+    transition: box-shadow 0.3s ease;
+}
+
+.mission-item.open .mission-dot {
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18), 0 0 10px 2px rgba(96, 165, 250, 0.5);
+}
+
+.mission-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: linear-gradient(145deg, #0C1524, #070B18);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.mission-item.open .mission-header {
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+.mission-label {
+    display: block;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.mission-title {
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.mission-chevron {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.mission-item.open .mission-chevron {
+    transform: rotate(180deg);
+}
+
+.mission-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mission-item.open .mission-body {
+    grid-template-rows: 1fr;
+}
+
+.mission-body > p,
+.mission-body > .project-metrics,
+.mission-body > .project-tags,
+.mission-body > .case-outcome,
+.mission-body > .project-btn {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.mission-body {
+    overflow: hidden;
+}
+
+.mission-body p {
+    color: #CBD5E1;
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 18px 20px 0;
+}
+
+.mission-body .project-metrics,
+.mission-body .project-tags {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mission-body .case-outcome {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mission-body .project-btn {
+    margin: 0 20px 20px;
+}
+
+.metric-web {
+    background: rgba(251, 191, 36, 0.12);
+    color: #FBBF24;
+    border-color: rgba(251, 191, 36, 0.25);
+}
+
+/* Reserved / upcoming mission slide */
+.mission-reserved .mission-header-static {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    background: transparent;
+    border: 1px dashed rgba(96, 165, 250, 0.3);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.mission-reserved .mission-label {
+    color: var(--text-muted);
+}
+
+.mission-reserved .mission-title {
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.mission-chevron-static {
+    animation: reservedPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes reservedPulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.mission-dot-pulse {
+    background: rgba(96, 165, 250, 0.3);
+    animation: reservedDotPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes reservedDotPulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1); }
+    50% { box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1), 0 0 12px 3px rgba(96, 165, 250, 0.4); }
+}
+
+.mission-body-static {
+    display: block;
+    padding: 0;
+}
+
+.mission-reserved-text {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-style: italic;
+    padding: 14px 20px 0;
+}
+
+@media (max-width: 700px) {
+    .mission-log {
+        padding-left: 24px;
+    }
+    .mission-dot {
+        left: -24px;
+    }
+    .mission-title {
+        font-size: 15px;
+    }
+}
+
 .project-card h3 {
     color: var(--white);
     font-size: 22px;

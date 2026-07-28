@@ -926,14 +926,77 @@ h2 {
 
 .mission-dot {
     position: absolute;
-    left: -34px;
-    top: 22px;
-    width: 12px;
-    height: 12px;
+    left: -36px;
+    top: 19px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: var(--gold);
     box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
     transition: box-shadow 0.3s ease;
+    overflow: visible;
+}
+
+/* Distinct planet textures per project */
+.planet-ice {
+    background: radial-gradient(circle at 35% 30%, #E0F2FE, #7DD3FC 55%, #0369A1);
+}
+
+.planet-gold {
+    background: radial-gradient(circle at 35% 30%, #FEF3C7, #FBBF24 55%, #92400E);
+    box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+}
+
+.planet-gold::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    right: -5px;
+    height: 3px;
+    background: rgba(251, 191, 36, 0.55);
+    border-radius: 50%;
+    transform: translateY(-50%) rotate(-18deg);
+}
+
+.planet-violet {
+    background: radial-gradient(circle at 35% 30%, #EDE9FE, #A78BFA 55%, #4C1D95);
+}
+
+.planet-teal {
+    background: radial-gradient(circle at 35% 30%, #CCFBF1, #2DD4BF 55%, #115E59);
+}
+
+.planet-mars {
+    background: radial-gradient(circle at 35% 30%, #FED7AA, #FB923C 55%, #7C2D12);
+}
+
+.planet-saturn {
+    background: radial-gradient(circle at 35% 30%, #FDF4E3, #E0C89A 55%, #92702D);
+}
+
+.planet-saturn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    right: -6px;
+    height: 3px;
+    border: 1px solid rgba(224, 200, 154, 0.7);
+    border-radius: 50%;
+    transform: translateY(-50%) rotate(-20deg);
+}
+
+.planet-pink {
+    background: radial-gradient(circle at 35% 30%, #FCE7F3, #F472B6 55%, #831843);
+}
+
+.planet-green {
+    background: radial-gradient(circle at 35% 30%, #DCFCE7, #4ADE80 55%, #14532D);
+}
+
+.planet-slate {
+    background: radial-gradient(circle at 35% 30%, #E2E8F0, #94A3B8 55%, #334155);
 }
 
 .mission-item.open .mission-dot {

@@ -2252,26 +2252,46 @@ footer {
     min-height: 0;
 }
 
-.edu-constellation {
-    width: 100%;
-    height: auto;
+.edu-coursework-group {
     margin-top: 18px;
 }
 
-.edu-constellation circle {
-    cursor: default;
-    transition: r 0.2s ease;
+.edu-coursework-group:first-child {
+    margin-top: 20px;
 }
 
-.edu-constellation circle:hover {
-    r: 5;
-}
-
-.edu-cluster-label {
-    font-size: 10px;
+.edu-coursework-label {
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
 }
+
+.edu-coursework-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.edu-coursework-chips span {
+    background: #0C1524;
+    border: 1px solid;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
+.cat-data { color: #7DD3FC; }
+.cat-pm { color: #A78BFA; }
+.cat-sys { color: #4ADE80; }
+.cat-biz { color: #FBBF24; }
+
+span.cat-data { border-color: rgba(125, 211, 252, 0.3); }
+span.cat-pm { border-color: rgba(167, 139, 250, 0.3); }
+span.cat-sys { border-color: rgba(74, 222, 128, 0.3); }
+span.cat-biz { border-color: rgba(251, 191, 36, 0.3); }
 
 @media (max-width: 700px) {
     .edu-console-header {

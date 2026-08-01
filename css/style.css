@@ -2121,6 +2121,168 @@ footer {
     margin: 0 auto;
 }
 
+/* Education transcript console + constellation */
+.edu-console {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 16px;
+    padding: 24px 28px;
+    transition: border-color 0.3s ease;
+}
+
+.edu-console.open {
+    border-color: rgba(96, 165, 250, 0.45);
+}
+
+.edu-console-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.edu-console-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 10px;
+    padding: 6px;
+    flex-shrink: 0;
+}
+
+.edu-console-header h3 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.edu-console-school {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.edu-console-date {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.edu-console-stats {
+    display: flex;
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 14px 0;
+    margin-bottom: 16px;
+}
+
+.edu-stat {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-stat:last-child {
+    border-right: none;
+}
+
+.edu-stat-value {
+    display: block;
+    color: var(--gold);
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.edu-stat-badge .edu-stat-value {
+    font-size: 14px;
+}
+
+.edu-stat-label {
+    display: block;
+    color: #6B7280;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.edu-coursework-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: none;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.edu-coursework-toggle .mission-chevron {
+    width: 13px;
+    height: 13px;
+    transition: transform 0.3s ease;
+}
+
+.edu-console.open .edu-coursework-toggle .mission-chevron {
+    transform: rotate(180deg);
+}
+
+.edu-coursework-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edu-console.open .edu-coursework-body {
+    grid-template-rows: 1fr;
+}
+
+.edu-coursework-inner {
+    overflow: hidden;
+    min-height: 0;
+}
+
+.edu-constellation {
+    width: 100%;
+    height: auto;
+    margin-top: 18px;
+}
+
+.edu-constellation circle {
+    cursor: default;
+    transition: r 0.2s ease;
+}
+
+.edu-constellation circle:hover {
+    r: 5;
+}
+
+.edu-cluster-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 700px) {
+    .edu-console-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .edu-stat-label {
+        font-size: 9px;
+    }
+}
+
 .education-card {
     display: flex;
     align-items: center;

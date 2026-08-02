@@ -668,9 +668,18 @@ h2 {
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     text-align: center;
     font-size: clamp(30px, 3.4vw, 46px);
-    color: var(--white);
     margin-bottom: 52px;
     position: relative;
+    background: linear-gradient(90deg, #F9FAFB 0%, #93C5FD 25%, #F9FAFB 50%, #93C5FD 75%, #F9FAFB 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmerSweep 5s linear infinite;
+}
+
+@keyframes shimmerSweep {
+    to { background-position: -200% center; }
 }
 
 .section-eyebrow {
@@ -873,6 +882,28 @@ h2 {
     color: var(--white);
     font-size: 16px;
     font-weight: 700;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.story-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.story-header:hover .story-title {
+    color: var(--gold);
+}
+
+.story-header:hover .story-title::after {
+    width: 100%;
 }
 
 .story-chevron {
@@ -1237,6 +1268,28 @@ h2 {
     font-size: 17px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.mission-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.mission-header:hover .mission-title {
+    color: var(--gold);
+}
+
+.mission-header:hover .mission-title::after {
+    width: 100%;
 }
 
 .mission-tags {

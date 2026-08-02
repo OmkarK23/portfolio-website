@@ -88,7 +88,7 @@
 
             <p class="hero-eyebrow stagger-item" style="--d:0">Data Engineer &middot; Project Manager &middot; Product Manager</p>
 
-            <h1 class="stagger-item" style="--d:1">Omkar Kalekar</h1>
+            <h1 class="stagger-item" id="heroName" style="--d:1">Omkar Kalekar</h1>
 
             <h2 class="stagger-item" style="--d:2">Building Data-Driven Products, Projects & Analytical Solutions</h2>
 
@@ -136,15 +136,15 @@
 
             <div class="hero-stats stagger-item" style="--d:9">
                 <div class="hero-stat">
-                    <div class="hero-stat-num">2+</div>
+                    <div class="hero-stat-num" id="statYears">2+</div>
                     <div class="hero-stat-label">Years experience</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-num">9</div>
+                    <div class="hero-stat-num" id="statProjects">9</div>
                     <div class="hero-stat-label">Projects built</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-num">7</div>
+                    <div class="hero-stat-num" id="statCerts">7</div>
                     <div class="hero-stat-label">Certifications</div>
                 </div>
             </div>
@@ -1573,6 +1573,54 @@
 
 <script>
     (function () {
+        // Scramble/decode reveal for hero name
+        var heroName = document.getElementById('heroName');
+        if (heroName) {
+            var finalName = heroName.textContent;
+            var scrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            setTimeout(function () {
+                var iterations = 0;
+                var scrambleInterval = setInterval(function () {
+                    heroName.textContent = finalName.split('').map(function (ch, i) {
+                        if (ch === ' ') return ' ';
+                        if (i < iterations) return finalName[i];
+                        return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+                    }).join('');
+                    iterations += 0.7;
+                    if (iterations >= finalName.length) {
+                        clearInterval(scrambleInterval);
+                        heroName.textContent = finalName;
+                    }
+                }, 45);
+            }, 550);
+        }
+
+        // Rolling digit reveal for hero stats
+        function rollStat(id, finalValue, delay) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            var digits = '0123456789';
+            setTimeout(function () {
+                var ticks = 0;
+                var rollInterval = setInterval(function () {
+                    el.textContent = finalValue.split('').map(function (ch) {
+                        if (/[0-9]/.test(ch)) {
+                            return digits[Math.floor(Math.random() * digits.length)];
+                        }
+                        return ch;
+                    }).join('');
+                    ticks++;
+                    if (ticks > 10) {
+                        clearInterval(rollInterval);
+                        el.textContent = finalValue;
+                    }
+                }, 55);
+            }, delay);
+        }
+        rollStat('statYears', '2+', 700);
+        rollStat('statProjects', '9', 800);
+        rollStat('statCerts', '7', 900);
+
         // Space background: twinkling starfield + constellation lines
         var spaceBg = document.getElementById('space-bg');
         if (spaceBg) {

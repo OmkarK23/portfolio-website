@@ -334,6 +334,113 @@ body {
     margin-top: 2px;
 }
 
+/* Hero journey timeline (horizontally scrollable) */
+.hero-journey {
+    max-width: 900px;
+    margin: 28px auto 0;
+    position: relative;
+}
+
+.hero-journey::before,
+.hero-journey::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hero-journey::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--black), transparent);
+}
+
+.hero-journey::after {
+    right: 0;
+    background: linear-gradient(270deg, var(--black), transparent);
+}
+
+.hero-journey-track {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 6px 24px 12px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(96, 165, 250, 0.4) transparent;
+}
+
+.hero-journey-track::-webkit-scrollbar {
+    height: 4px;
+}
+
+.hero-journey-track::-webkit-scrollbar-thumb {
+    background: rgba(96, 165, 250, 0.4);
+    border-radius: 4px;
+}
+
+.hero-journey-item {
+    flex-shrink: 0;
+    width: 130px;
+    text-align: center;
+    scroll-snap-align: start;
+}
+
+.hero-journey-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0C1524;
+    border: 1.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+}
+
+.hero-journey-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.cat-academic { border-color: #4ADE80; color: #4ADE80; }
+.cat-technical { border-color: #7DD3FC; color: #7DD3FC; }
+.cat-career { border-color: #A78BFA; color: #A78BFA; }
+.cat-global { border-color: #FBBF24; color: #FBBF24; }
+.cat-leadership { border-color: #F472B6; color: #F472B6; }
+
+.hero-journey-year {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+}
+
+.hero-journey-text {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.hero-journey-arrow {
+    flex-shrink: 0;
+    color: rgba(96, 165, 250, 0.3);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .hero-journey-item {
+        width: 110px;
+    }
+    .hero-journey-text {
+        font-size: 10px;
+    }
+}
+
 .hero-photo {
     position: relative;
     width: 170px;

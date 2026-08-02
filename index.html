@@ -1524,41 +1524,44 @@
     <p class="section-eyebrow">07 / Contact</p>
     <h2 class="section-title">Let's Connect</h2>
 
-    <div class="contact-container contact-redesign reveal">
+    <div class="contact-editorial reveal">
 
-        <div class="contact-radar" aria-hidden="true"></div>
+        <h3 class="contact-headline">Let's talk about<br><span>what's next.</span></h3>
 
-        <div class="contact-intro">
-            <div class="contact-status">
-                <span class="contact-status-dot"></span>
-                <span>Channel Open &middot; Ready to Receive</span>
-            </div>
+        <p class="contact-subline-2">
+            Open to Data Engineer, Project Manager, and Product Manager roles &mdash;
+            based in Baltimore, MD, open to relocate.
+        </p>
 
-            <h3>Open to conversations, collaborations, and opportunities.</h3>
+        <a href="https://calendly.com/omkarkalekar2323/30min" target="_blank" class="contact-btn coffee-btn contact-primary-btn">
+            Schedule Coffee Chat &rarr;
+        </a>
 
-            <p>
-                I am currently open to opportunities in Data Engineer, Project Manager,
-                and Product Manager roles.
-            </p>
-
-            <p class="contact-location">
-                <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Based in Baltimore, MD &middot; open to relocate
-            </p>
-        </div>
-
-        <div class="contact-actions">
-            <a href="mailto:omkarkalekar2323@gmail.com" class="contact-btn">Email Me</a>
-
-            <a href="https://calendly.com/omkarkalekar2323/30min"
-               target="_blank"
-               class="contact-btn coffee-btn">
-               Schedule Coffee Chat
+        <div class="contact-icon-row">
+            <a href="mailto:omkarkalekar2323@gmail.com" class="contact-icon-btn">
+                <span class="contact-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+                </span>
+                <span class="contact-icon-label">Email</span>
             </a>
-
-            <a href="https://www.linkedin.com/in/omkar-kalekar" target="_blank" class="contact-btn">LinkedIn</a>
-            <a href="https://github.com/OmkarK23" target="_blank" class="contact-btn">GitHub</a>
-            <a href="resume/Omkar_Kalekar_Resume.pdf" target="_blank" class="contact-btn">Resume</a>
+            <a href="https://www.linkedin.com/in/omkar-kalekar" target="_blank" class="contact-icon-btn">
+                <span class="contact-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><path d="M9.5 9.5l5 5"/></svg>
+                </span>
+                <span class="contact-icon-label">LinkedIn</span>
+            </a>
+            <a href="https://github.com/OmkarK23" target="_blank" class="contact-icon-btn">
+                <span class="contact-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="9" r="2"/><path d="M6 8v8M6 12h8a4 4 0 0 0 4-4V9"/></svg>
+                </span>
+                <span class="contact-icon-label">GitHub</span>
+            </a>
+            <a href="resume/Omkar_Kalekar_Resume.pdf" target="_blank" class="contact-icon-btn">
+                <span class="contact-icon-circle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3h7l4 4v14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></svg>
+                </span>
+                <span class="contact-icon-label">Resume</span>
+            </a>
         </div>
 
     </div>
@@ -1958,7 +1961,7 @@
         }
 
         // Signal transmission animation on contact button click
-        document.querySelectorAll('.contact-btn').forEach(function (btn) {
+        document.querySelectorAll('.contact-btn, .contact-icon-btn').forEach(function (btn) {
             btn.addEventListener('click', function (e) {
                 var rect = btn.getBoundingClientRect();
                 var signal = document.createElement('div');

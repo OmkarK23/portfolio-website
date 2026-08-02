@@ -3130,6 +3130,99 @@ span.cat-biz { border-color: rgba(251, 191, 36, 0.3); }
     text-align: center;
 }
 
+/* New editorial Contact layout */
+.contact-editorial {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-headline {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.contact-headline span {
+    color: var(--gold);
+}
+
+.contact-subline-2 {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 520px;
+}
+
+.contact-primary-btn {
+    display: inline-block;
+    margin-bottom: 34px;
+}
+
+.contact-icon-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.contact-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1.5px solid rgba(96, 165, 250, 0.35);
+    border-radius: 999px;
+    padding: 11px;
+    transition: all 0.3s ease;
+}
+
+.contact-icon-btn:hover {
+    border-color: var(--gold);
+    background: rgba(96, 165, 250, 0.08);
+}
+
+.contact-icon-circle {
+    width: 18px;
+    height: 18px;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon-circle svg {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-icon-label {
+    display: inline-block;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    transition: max-width 0.35s ease, opacity 0.25s ease, margin-left 0.35s ease;
+}
+
+.contact-icon-btn:hover .contact-icon-label {
+    max-width: 90px;
+    opacity: 1;
+    margin-left: 8px;
+}
+
+@media (max-width: 600px) {
+    .contact-headline {
+        font-size: 30px;
+    }
+}
+
 .coffee-btn {
     background: transparent;
     color: #60A5FA;

@@ -339,6 +339,7 @@ body {
     max-width: 900px;
     margin: 28px auto 0;
     position: relative;
+    padding: 0 34px;
 }
 
 .hero-journey::before,
@@ -387,6 +388,19 @@ body {
     width: 130px;
     text-align: center;
     scroll-snap-align: start;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.hero-journey-item:hover {
+    transform: translateY(-3px);
+}
+
+.hero-journey-item:hover .hero-journey-icon {
+    box-shadow: 0 0 12px 1px currentColor;
 }
 
 .hero-journey-icon {
@@ -430,6 +444,52 @@ body {
     color: rgba(96, 165, 250, 0.3);
     font-size: 14px;
     margin-top: 10px;
+}
+
+.hero-journey-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #0C1524;
+    border: 1px solid rgba(96, 165, 250, 0.4);
+    color: var(--gold);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: all 0.25s ease;
+}
+
+.hero-journey-nav:hover {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+}
+
+.hero-journey-nav svg {
+    width: 14px;
+    height: 14px;
+}
+
+.hero-journey-nav-left {
+    left: 0;
+}
+
+.hero-journey-nav-right {
+    right: 0;
+}
+
+@media (max-width: 700px) {
+    .hero-journey-nav {
+        display: none;
+    }
+    .hero-journey {
+        padding: 0;
+    }
 }
 
 @media (max-width: 700px) {

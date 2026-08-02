@@ -1526,12 +1526,24 @@
 
     <div class="contact-container contact-redesign reveal">
 
+        <div class="contact-radar" aria-hidden="true"></div>
+
+        <div class="contact-status">
+            <span class="contact-status-dot"></span>
+            <span>Channel Open &middot; Ready to Receive</span>
+        </div>
+
         <div class="contact-intro">
             <h3>Open to conversations, collaborations, and opportunities.</h3>
 
             <p>
-                I am currently open to opportunities in Data Engineering, Data & Business Analysis,
-                and Project Management roles.
+                I am currently open to opportunities in Data Engineer, Project Manager,
+                and Product Manager roles.
+            </p>
+
+            <p class="contact-location">
+                <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Based in Baltimore, MD &middot; open to relocate
             </p>
         </div>
 
@@ -1944,6 +1956,23 @@
                 densityBtn.title = 'Sky mode: ' + level;
             });
         }
+
+        // Signal transmission animation on contact button click
+        document.querySelectorAll('.contact-btn').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                var rect = btn.getBoundingClientRect();
+                var signal = document.createElement('div');
+                signal.className = 'signal-dot';
+                signal.style.left = (e.clientX) + 'px';
+                signal.style.top = (rect.top) + 'px';
+                document.body.appendChild(signal);
+                signal.animate([
+                    { transform: 'translateY(0) scale(1)', opacity: 1 },
+                    { transform: 'translateY(-70px) scale(0.3)', opacity: 0 }
+                ], { duration: 650, easing: 'ease-out' });
+                setTimeout(function () { signal.remove(); }, 650);
+            });
+        });
     })();
 </script>
 </body>

@@ -753,10 +753,69 @@
         <div class="mission-log">
 
             <div class="mission-item reveal" style="--d:0">
+                <div class="mission-dot planet-violet" data-planet="Synthia"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">ENTRY 01 &middot; Product / AI</span>
+                        <h3 class="mission-title">AI Event Planning &amp; Engagement System</h3>
+                        <div class="mission-tags">
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                            <span>Scikit-learn</span>
+                            <span>TextBlob</span>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                    <span class="mission-decision-badge">&#128203; 2 Decisions</span>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <div class="mission-body-inner">
+                    <p class="mission-duration">Feb 2026 – Present</p>
+                    <p class="mission-desc">A solo product build, end to end, from defining the problem (organizers can't predict turnout in time to adjust budget or staffing) to a live, deployed release. Owned the roadmap, prioritized what to build, and did the technical work myself: ML attendance prediction, AI content generation, feedback analysis.</p>
+                    <p class="mission-decision-label">Decision Log</p>
+                    <div class="mission-decision-log">
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">01</div>
+                            <div class="mission-decision-title">Baseline validation over raw metric</div>
+                            <div class="mission-decision-text">Validated R&sup2; = 0.83 against baseline models instead of reporting the number alone.</div>
+                        </div>
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">02</div>
+                            <div class="mission-decision-title">Fallback mode over hard API dependency</div>
+                            <div class="mission-decision-text">Product stays functional if the AI API is unavailable, prioritizing reliability over a nicer-but-fragile feature.</div>
+                        </div>
+                    </div>
+                    <ul class="mission-highlights">
+                        <li>Owned product scope and roadmap for an event planning tool combining ML, AI content generation, and analytics, shipped and live on Streamlit Cloud</li>
+                        <li>Found and fixed a data leakage bug in my own model before it shipped, the kind of thing that's easy to miss and matters a lot</li>
+                        <li>Set up automated tests and CI so regressions get caught before they ship, not after</li>
+                    </ul>
+                    <div class="project-metrics">
+                        <div class="metric-card metric-ai">
+                            <span class="metric-value">0.83</span>
+                            <span class="metric-label">R&sup2; vs. Baseline</span>
+                        </div>
+                        <div class="metric-card metric-ai">
+                            <span class="metric-value">Fixed</span>
+                            <span class="metric-label">Data Leakage Bug</span>
+                        </div>
+                        <div class="metric-card metric-ai">
+                            <span class="metric-value">CI/CD</span>
+                            <span class="metric-label">Automated Tests</span>
+                        </div>
+                    </div>
+                    <p class="case-outcome">Outcome &mdash; Solo-built and shipped an ML + AI-powered product, from problem definition to live deployment</p>
+                    <a href="https://github.com/OmkarK23/ai-event-planner.git" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mission-item reveal" style="--d:1">
                 <div class="mission-dot planet-ice" data-planet="Lucidia"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 01 &middot; Analytics Engineering</span>
+                        <span class="mission-label">ENTRY 02 &middot; Analytics Engineering</span>
                         <h3 class="mission-title">Student Success Intelligence Platform</h3>
                         <div class="mission-tags">
                             <span>Databricks</span>
@@ -766,18 +825,30 @@
                             <span>Lakeview</span>
                         </div>
                     </div>
+                    <span class="mission-decision-badge">&#128203; 2 Decisions</span>
                     <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="mission-body">
                     <div class="mission-body-inner">
                     <p class="mission-duration">Sep 2025 – Present</p>
-                    <p class="mission-desc">Designed and developed an enterprise learning analytics platform that centralizes academic, enrollment, attendance, and Blackboard LMS data into a scalable Databricks Lakehouse, enabling executive reporting, early identification of at-risk students, and data-driven decision-making for student success initiatives.</p>
+                    <p class="mission-desc">Self-directed platform built around a hypothesis: universities have the data to flag at-risk students early, but it's scattered across disconnected systems. Validated the concept by demoing to professors and gathering peer feedback, which surfaced clear next steps for the product.</p>
+                    <p class="mission-decision-label">Decision Log</p>
+                    <div class="mission-decision-log">
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">01</div>
+                            <div class="mission-decision-title">Validate before building further</div>
+                            <div class="mission-decision-text">Demoed dashboards to professors and gathered peer feedback to validate the core use case, rather than building out the full vision before testing it against real users.</div>
+                        </div>
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">02</div>
+                            <div class="mission-decision-title">Rule-based signal over a black-box model</div>
+                            <div class="mission-decision-text">Built a rule-based Priority Outreach Queue instead of a more complex ML model, so advisors get an interpretable, actionable early-warning signal they can trust and act on.</div>
+                        </div>
+                    </div>
                     <ul class="mission-highlights">
                         <li>Designed a Medallion (Bronze, Silver, Gold) Lakehouse architecture using Databricks, Delta Lake, Apache Spark, and Spark SQL</li>
-                        <li>Engineered features from 7.5M+ Blackboard LMS events and 147K+ enrollment records via scalable ETL pipelines</li>
-                        <li>Built a reusable Gold semantic layer with 13+ business-ready views for executive reporting</li>
+                        <li>Processed 7.5M+ LMS events and 147K+ enrollment records into a reusable semantic layer</li>
                         <li>Created three interactive Databricks Lakeview dashboards for leadership, advisors, and department chairs</li>
-                        <li>Implemented a rule-based intervention engine and Priority Outreach Queue to flag at-risk students</li>
                     </ul>
                     <div class="project-metrics">
                         <div class="metric-card metric-databricks">
@@ -803,11 +874,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:1">
+            <div class="mission-item reveal" style="--d:2">
                 <div class="mission-dot planet-gold" data-planet="Croesus"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 02 &middot; Cloud / FinOps</span>
+                        <span class="mission-label">ENTRY 03 &middot; Cloud / FinOps</span>
                         <h3 class="mission-title">Cloud FinOps Intelligence Platform</h3>
                         <div class="mission-tags">
                             <span>AWS</span>
@@ -819,17 +890,29 @@
                             <span>Prophet</span>
                         </div>
                     </div>
+                    <span class="mission-decision-badge">&#128203; 2 Decisions</span>
                     <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="mission-body">
                     <div class="mission-body-inner">
                     <p class="mission-duration">Mar 2026 – Present</p>
-                    <p class="mission-desc">Designed and developed a serverless Cloud FinOps Intelligence Platform to automate cloud cost analytics, optimization, and forecasting using AWS services. The platform automatically processes cloud billing data, generates optimization recommendations, identifies underutilized resources, calculates cost efficiency metrics, estimates savings opportunities, and forecasts future cloud spend using machine learning.</p>
+                    <p class="mission-desc">Independent deep-dive inspired by a case study on cloud cost management, built using a real public cloud billing dataset to practice end-to-end FinOps analytics rather than a live company environment.</p>
+                    <p class="mission-decision-label">Decision Log</p>
+                    <div class="mission-decision-log">
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">01</div>
+                            <div class="mission-decision-title">Real public dataset over waiting for company access</div>
+                            <div class="mission-decision-text">Used a real public cloud billing dataset to practice the full workflow, rather than needing (or waiting for) access to a live company environment.</div>
+                        </div>
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">02</div>
+                            <div class="mission-decision-title">Event-driven ingestion over manual processing</div>
+                            <div class="mission-decision-text">Automated data ingestion and transformation using S3 Event Notifications and Glue ETL, turning raw billing data into analytics-ready datasets automatically instead of manual/batch handling.</div>
+                        </div>
+                    </div>
                     <ul class="mission-highlights">
-                        <li>Automated data refresh using S3 Event Notifications, AWS Lambda, and AWS Glue</li>
-                        <li>Built ETL pipelines using AWS Glue and PySpark</li>
-                        <li>Created Athena analytics views for FinOps optimization</li>
-                        <li>Developed executive dashboards using Streamlit and Plotly</li>
+                        <li>Built a serverless analytics platform (AWS Lambda, Glue, Athena) to surface cost optimization opportunities</li>
+                        <li>Analyzed $2.1M+ in cloud spend across 1,000+ resources</li>
                         <li>Forecasted future cloud spend and budget risk using Prophet</li>
                     </ul>
                     <div class="project-metrics">
@@ -852,54 +935,6 @@
                     </div>
                     <p class="case-outcome">Outcome &mdash; $420K+ in cloud waste identified across $2.1M+ analyzed spend</p>
                     <a href="https://github.com/OmkarK23/cloud-finops-intelligence-platform" target="_blank" class="project-btn">View Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mission-item reveal" style="--d:2">
-                <div class="mission-dot planet-violet" data-planet="Synthia"></div>
-                <button class="mission-header" onclick="toggleMission(this)">
-                    <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 03 &middot; Product / AI</span>
-                        <h3 class="mission-title">AI Event Planning &amp; Engagement System</h3>
-                        <div class="mission-tags">
-                            <span>Python</span>
-                            <span>Streamlit</span>
-                            <span>Scikit-learn</span>
-                            <span>TextBlob</span>
-                            <span>SQLite</span>
-                        </div>
-                    </div>
-                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="mission-body">
-                    <div class="mission-body-inner">
-                    <p class="mission-duration">Aug 2025 – Present</p>
-                    <p class="mission-desc">Led the end-to-end design, development, and deployment of an AI-powered event planning platform integrating machine learning, NLP, analytics, and recommendation systems, as Product Owner / Developer.</p>
-                    <ul class="mission-highlights">
-                        <li>Defined product vision, user workflow, and feature roadmap from a product-owner perspective</li>
-                        <li>Developed an attendance prediction engine using Scikit-learn</li>
-                        <li>Designed AI-powered strategy generation and marketing content modules</li>
-                        <li>Implemented NLP-based attendee feedback analysis using TextBlob sentiment analysis</li>
-                        <li>Built interactive analytics dashboards with SQLite-backed event history</li>
-                        <li>Directed UI/UX decisions and deployed via Streamlit Cloud and GitHub</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div class="metric-card metric-ai">
-                            <span class="metric-value">0.701</span>
-                            <span class="metric-label">R&sup2; Model Fit</span>
-                        </div>
-                        <div class="metric-card metric-ai">
-                            <span class="metric-value">72.36</span>
-                            <span class="metric-label">RMSE (Attendees)</span>
-                        </div>
-                        <div class="metric-card metric-ai">
-                            <span class="metric-value">56.71</span>
-                            <span class="metric-label">MAE (Attendees)</span>
-                        </div>
-                    </div>
-                    <p class="case-outcome">Outcome &mdash; Attendance forecasting and NLP feedback analysis shipped to production</p>
-                    <a href="https://github.com/OmkarK23/ai-event-planner.git" target="_blank" class="project-btn">View Project</a>
                     </div>
                 </div>
             </div>
@@ -1237,24 +1272,23 @@
         <!-- TCR -->
         <div class="timeline-item reveal" style="--d:3">
             <div class="timeline-dot"></div>
-            <div class="timeline-date">Jan 2022 – May 2022</div>
+            <div class="timeline-date">Jan 2022 – Jan 2023</div>
             <span class="timeline-status">Mission Complete</span>
 
             <div class="timeline-body">
                 <div class="timeline-header">
                     <img class="timeline-logo" src="images/education/tcr.jpeg" alt="TCR Logo">
                     <div>
-                        <h3>Data Science Intern</h3>
+                        <h3>Associate Product Analyst</h3>
                         <a href="#" class="company-link">TCR Innovation</a>
-                        <span class="experience-tag">Data Science</span>
+                        <span class="experience-tag">Product Analytics</span>
                     </div>
                 </div>
-                <p class="timeline-location">Mumbai, India</p>
+                <p class="timeline-location">Mumbai, Maharashtra, India · Remote</p>
                 <ul>
-                    <li>Built machine learning pipelines using Python, Pandas, NumPy, and PySpark to analyze historical datasets and predict business outcomes.</li>
-                    <li>Developed Power BI and Tableau dashboards to communicate model performance and analytical insights to stakeholders.</li>
-                    <li>Improved data processing efficiency by approximately 20% through workflow optimization and automation.</li>
-                    <li>Leveraged AI-assisted tools to accelerate data analysis, experimentation, and rapid prototyping of analytical solutions.</li>
+                    <li>Influenced product decisions by conducting competitive analysis across 5–10 competitor products per project, delivering actionable recommendations to the product team.</li>
+                    <li>Supported product strategy by analyzing market trends and competitor positioning, informing feature and roadmap discussions.</li>
+                    <li>Presented market and competitive research findings to stakeholders, translating analysis into recommendations that shaped product direction.</li>
                 </ul>
             </div>
         </div>

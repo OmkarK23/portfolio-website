@@ -747,14 +747,40 @@ h2 {
 }
 
 .how-i-work {
+    position: relative;
     max-width: 680px;
     margin: 60px auto 0;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 44px;
+    overflow: visible;
+}
+
+.how-i-work::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.1), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.how-i-work-mark {
+    position: relative;
+    display: block;
+    color: rgba(96, 165, 250, 0.3);
+    font-family: 'Space Grotesk', serif;
+    font-size: 64px;
+    line-height: 0.5;
+    margin-bottom: 4px;
 }
 
 .how-i-work-quote {
+    position: relative;
     color: var(--white);
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: clamp(19px, 2.4vw, 26px);
@@ -762,27 +788,45 @@ h2 {
     line-height: 1.45;
     border-left: 3px solid var(--gold);
     padding-left: 20px;
-    margin: 14px 0 24px;
+    margin: 14px 0 28px;
     text-align: left;
 }
 
 .how-i-work-points {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 8px;
-    color: #9CA3AF;
-    font-size: 12.5px;
+    gap: 10px;
 }
 
 .how-i-work-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(96, 165, 250, 0.08);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 999px;
+    padding: 7px 16px;
+    color: #CBD5E1;
+    font-size: 12px;
+    font-weight: 600;
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
-.how-i-work-points span:not(:last-child)::after {
-    content: "\00B7";
-    margin-left: 10px;
-    color: rgba(96, 165, 250, 0.4);
+.how-i-work-points span:hover {
+    border-color: var(--gold);
+    background: rgba(96, 165, 250, 0.15);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.how-i-work-points span svg {
+    width: 14px;
+    height: 14px;
+    color: var(--gold);
+    flex-shrink: 0;
 }
 
 .story-accordion {

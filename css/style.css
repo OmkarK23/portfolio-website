@@ -746,6 +746,45 @@ h2 {
     text-align: center;
 }
 
+.how-i-work {
+    max-width: 680px;
+    margin: 60px auto 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 44px;
+}
+
+.how-i-work-quote {
+    color: var(--white);
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: clamp(19px, 2.4vw, 26px);
+    font-weight: 700;
+    line-height: 1.45;
+    border-left: 3px solid var(--gold);
+    padding-left: 20px;
+    margin: 14px 0 24px;
+    text-align: left;
+}
+
+.how-i-work-points {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 8px;
+    color: #9CA3AF;
+    font-size: 12.5px;
+}
+
+.how-i-work-points span {
+    white-space: nowrap;
+}
+
+.how-i-work-points span:not(:last-child)::after {
+    content: "\00B7";
+    margin-left: 10px;
+    color: rgba(96, 165, 250, 0.4);
+}
+
 .story-accordion {
     text-align: left;
     display: flex;

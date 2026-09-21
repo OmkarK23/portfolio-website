@@ -932,10 +932,75 @@
             </div>
 
             <div class="mission-item reveal" style="--d:1">
+                <div class="mission-dot planet-crimson" data-planet="Vitalis"></div>
+                <button class="mission-header" onclick="toggleMission(this)">
+                    <div class="mission-header-text">
+                        <span class="mission-label">ENTRY 02 &middot; Data Engineering / Governance</span>
+                        <h3 class="mission-title">Patient Vitals Monitoring System</h3>
+                        <div class="mission-tags">
+                            <span>GCP Pub/Sub</span>
+                            <span>Dataflow</span>
+                            <span>Apache Beam</span>
+                            <span>BigQuery</span>
+                            <span>Power BI</span>
+                        </div>
+                    </div>
+                    <span class="mission-decision-badge">&#128203; 1 Decision</span>
+                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="mission-body">
+                    <div class="mission-body-inner">
+                    <p class="mission-duration">Sep 2026 – Present</p>
+                    <p class="mission-desc">Solo build of a real-time healthcare data pipeline, end to end, from architecting the data flow to deploying a live streaming job and connecting a real-time dashboard. Built as Product Owner in a project associated with UMBC. Owned the technical scope and made every infrastructure decision, including debugging production-style issues (permissions, capacity, silent failures) that don't show up in a tutorial.</p>
+                    <p class="mission-decision-label">Decision Log</p>
+                    <div class="mission-decision-log">
+                        <div class="mission-decision">
+                            <div class="mission-decision-num">01</div>
+                            <div class="mission-decision-title">Quarantine failed records instead of filtering them out</div>
+                            <div class="mission-decision-text">A filter that drops records silently gives no way to know what was lost or why. Quarantining costs a little storage and makes every failure inspectable.</div>
+                        </div>
+                    </div>
+                    <ul class="mission-highlights">
+                        <li>Designed and deployed a real-time streaming pipeline (Pub/Sub, Dataflow/Apache Beam, BigQuery) processing simulated patient vitals in 60-second windows, structured as a Bronze/Silver/Gold medallion architecture</li>
+                        <li>Replaced a filter that silently dropped bad records with 12 documented data quality rules covering completeness, validity, consistency, and timeliness, each with an ID and a severity</li>
+                        <li>Measured the gap the old filter left open: 4.5% of bad records were reaching the curated layer because timestamps were never checked. The new rules caught all of them, with zero false positives across 10,000 test records</li>
+                        <li>Failed records now go to a quarantine store with the original message and every failure reason, so bad data can be investigated and replayed instead of disappearing</li>
+                        <li>Exposed per-rule failure counters in the Dataflow console, so a spike in one rule is visible without querying the data</li>
+                        <li>Classified every field for HIPAA sensitivity in a data dictionary defining data owner, steward, and custodian roles</li>
+                        <li>Found and fixed a silent data-loss bug where a misconfigured environment value caused the publisher to report success while every message actually failed, adding explicit confirmation checks so failures surface immediately</li>
+                        <li>Diagnosed and resolved cross-service IAM permission gaps (Pub/Sub, Cloud Storage, BigQuery) blocking the pipeline's service account, restoring end-to-end data flow</li>
+                        <li>Worked around a regional compute capacity shortage by reconfiguring the job to a different GCP region, keeping the pipeline deployable without downtime</li>
+                        <li>Connected the Gold-layer output to a live Power BI dashboard for real-time patient risk-level monitoring</li>
+                    </ul>
+                    <div class="project-metrics">
+                        <div class="metric-card metric-data">
+                            <span class="metric-value count-up">12</span>
+                            <span class="metric-label">Data Quality Rules</span>
+                        </div>
+                        <div class="metric-card metric-data">
+                            <span class="metric-value">4.5%</span>
+                            <span class="metric-label">Gap Closed (Bad Timestamps)</span>
+                        </div>
+                        <div class="metric-card metric-data">
+                            <span class="metric-value">0</span>
+                            <span class="metric-label">False Positives (10K Tests)</span>
+                        </div>
+                        <div class="metric-card metric-data">
+                            <span class="metric-value">60-sec</span>
+                            <span class="metric-label">Streaming Window</span>
+                        </div>
+                    </div>
+                    <p class="case-outcome">Outcome &mdash; Closed a 4.5% data-quality gap with 12 documented rules, validated against 10,000 test records with zero false positives</p>
+                    <a href="https://github.com/OmkarK23/patient-Vital-Monitoring" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="mission-item reveal" style="--d:2">
                 <div class="mission-dot planet-ice" data-planet="Lucidia"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 02 &middot; Analytics Engineering</span>
+                        <span class="mission-label">ENTRY 03 &middot; Analytics Engineering</span>
                         <h3 class="mission-title">Student Success Intelligence Platform</h3>
                         <div class="mission-tags">
                             <span>Databricks</span>
@@ -995,11 +1060,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:2">
+            <div class="mission-item reveal" style="--d:3">
                 <div class="mission-dot planet-gold" data-planet="Croesus"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 03 &middot; Cloud / FinOps</span>
+                        <span class="mission-label">ENTRY 04 &middot; Cloud / FinOps</span>
                         <h3 class="mission-title">Cloud FinOps Intelligence Platform</h3>
                         <div class="mission-tags">
                             <span>AWS</span>
@@ -1068,11 +1133,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:3">
+            <div class="mission-item reveal" style="--d:4">
                 <div class="mission-dot planet-teal" data-planet="Tempesta"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 04 &middot; Data Engineering</span>
+                        <span class="mission-label">ENTRY 05 &middot; Data Engineering</span>
                         <h3 class="mission-title">Real-Time Weather &amp; Utility Monitoring Pipeline</h3>
                         <div class="mission-tags">
                             <span>Kafka</span>
@@ -1104,11 +1169,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:4">
+            <div class="mission-item reveal" style="--d:5">
                 <div class="mission-dot planet-mars" data-planet="Horizon"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 05 &middot; Machine Learning</span>
+                        <span class="mission-label">ENTRY 06 &middot; Machine Learning</span>
                         <h3 class="mission-title">H1B Visa Case Prediction</h3>
                         <div class="mission-tags">
                             <span>Python</span>
@@ -1146,11 +1211,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:5">
+            <div class="mission-item reveal" style="--d:6">
                 <div class="mission-dot planet-saturn" data-planet="Genesis"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 06 &middot; Web Development</span>
+                        <span class="mission-label">ENTRY 07 &middot; Web Development</span>
                         <h3 class="mission-title">Portfolio Website (This Site)</h3>
                         <div class="mission-tags">
                             <span>HTML/CSS/JS</span>
@@ -1187,11 +1252,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:6">
+            <div class="mission-item reveal" style="--d:7">
                 <div class="mission-dot planet-pink" data-planet="Cinevia"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 07 &middot; Machine Learning</span>
+                        <span class="mission-label">ENTRY 08 &middot; Machine Learning</span>
                         <h3 class="mission-title">Movie Recommender System</h3>
                         <div class="mission-tags">
                             <span>Python</span>
@@ -1221,11 +1286,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:7">
+            <div class="mission-item reveal" style="--d:8">
                 <div class="mission-dot planet-green" data-planet="Terra Nova"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 08 &middot; Machine Learning</span>
+                        <span class="mission-label">ENTRY 09 &middot; Machine Learning</span>
                         <h3 class="mission-title">Bangalore House Price Prediction</h3>
                         <div class="mission-tags">
                             <span>Python</span>
@@ -1255,11 +1320,11 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:8">
+            <div class="mission-item reveal" style="--d:9">
                 <div class="mission-dot planet-slate" data-planet="Solstice"></div>
                 <button class="mission-header" onclick="toggleMission(this)">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 09 &middot; Machine Learning</span>
+                        <span class="mission-label">ENTRY 10 &middot; Machine Learning</span>
                         <h3 class="mission-title">Employee Attrition Analysis</h3>
                         <div class="mission-tags">
                             <span>Python</span>
@@ -1290,72 +1355,21 @@
                 </div>
             </div>
 
-            <div class="mission-item reveal" style="--d:9">
-                <div class="mission-dot planet-crimson" data-planet="Vitalis"></div>
-                <button class="mission-header" onclick="toggleMission(this)">
+            <div class="mission-item mission-reserved reveal" style="--d:10">
+                <div class="mission-dot mission-dot-pulse" data-planet="???"></div>
+                <div class="mission-header mission-header-static">
                     <div class="mission-header-text">
-                        <span class="mission-label">ENTRY 10 &middot; Data Engineering / Governance</span>
-                        <h3 class="mission-title">Patient Vitals Monitoring System</h3>
-                        <div class="mission-tags">
-                            <span>GCP Pub/Sub</span>
-                            <span>Dataflow</span>
-                            <span>Apache Beam</span>
-                            <span>BigQuery</span>
-                            <span>Power BI</span>
-                        </div>
+                        <span class="mission-label">ENTRY 11 &middot; STATUS: IN TRANSIT</span>
+                        <h3 class="mission-title">Reserved for the Next Mission</h3>
                     </div>
-                    <span class="mission-decision-badge">&#128203; 1 Decision</span>
-                    <svg class="mission-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="mission-body">
-                    <div class="mission-body-inner">
-                    <p class="mission-duration">Sep 2026 – Present</p>
-                    <p class="mission-desc">Solo build of a real-time healthcare data pipeline, end to end, from architecting the data flow to deploying a live streaming job and connecting a real-time dashboard. Built as Product Owner in a project associated with UMBC. Owned the technical scope and made every infrastructure decision, including debugging production-style issues (permissions, capacity, silent failures) that don't show up in a tutorial.</p>
-                    <p class="mission-decision-label">Decision Log</p>
-                    <div class="mission-decision-log">
-                        <div class="mission-decision">
-                            <div class="mission-decision-num">01</div>
-                            <div class="mission-decision-title">Quarantine failed records instead of filtering them out</div>
-                            <div class="mission-decision-text">A filter that drops records silently gives no way to know what was lost or why. Quarantining costs a little storage and makes every failure inspectable.</div>
-                        </div>
-                    </div>
-                    <ul class="mission-highlights">
-                        <li>Designed and deployed a real-time streaming pipeline (Pub/Sub, Dataflow/Apache Beam, BigQuery) processing simulated patient vitals in 60-second windows, structured as a Bronze/Silver/Gold medallion architecture</li>
-                        <li>Replaced a filter that silently dropped bad records with 12 documented data quality rules covering completeness, validity, consistency, and timeliness, each with an ID and a severity</li>
-                        <li>Measured the gap the old filter left open: 4.5% of bad records were reaching the curated layer because timestamps were never checked. The new rules caught all of them, with zero false positives across 10,000 test records</li>
-                        <li>Failed records now go to a quarantine store with the original message and every failure reason, so bad data can be investigated and replayed instead of disappearing</li>
-                        <li>Exposed per-rule failure counters in the Dataflow console, so a spike in one rule is visible without querying the data</li>
-                        <li>Classified every field for HIPAA sensitivity in a data dictionary defining data owner, steward, and custodian roles</li>
-                        <li>Found and fixed a silent data-loss bug where a misconfigured environment value caused the publisher to report success while every message actually failed, adding explicit confirmation checks so failures surface immediately</li>
-                        <li>Diagnosed and resolved cross-service IAM permission gaps (Pub/Sub, Cloud Storage, BigQuery) blocking the pipeline's service account, restoring end-to-end data flow</li>
-                        <li>Worked around a regional compute capacity shortage by reconfiguring the job to a different GCP region, keeping the pipeline deployable without downtime</li>
-                        <li>Connected the Gold-layer output to a live Power BI dashboard for real-time patient risk-level monitoring</li>
-                    </ul>
-                    <div class="project-metrics">
-                        <div class="metric-card metric-data">
-                            <span class="metric-value count-up">12</span>
-                            <span class="metric-label">Data Quality Rules</span>
-                        </div>
-                        <div class="metric-card metric-data">
-                            <span class="metric-value">4.5%</span>
-                            <span class="metric-label">Gap Closed (Bad Timestamps)</span>
-                        </div>
-                        <div class="metric-card metric-data">
-                            <span class="metric-value">0</span>
-                            <span class="metric-label">False Positives (10K Tests)</span>
-                        </div>
-                        <div class="metric-card metric-data">
-                            <span class="metric-value">60-sec</span>
-                            <span class="metric-label">Streaming Window</span>
-                        </div>
-                    </div>
-                    <p class="case-outcome">Outcome &mdash; Closed a 4.5% data-quality gap with 12 documented rules, validated against 10,000 test records with zero false positives</p>
-                    <a href="https://github.com/OmkarK23/patient-Vital-Monitoring" target="_blank" class="project-btn">View Project</a>
-                    </div>
+                    <svg class="mission-chevron mission-chevron-static" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                </div>
+                <div class="mission-body mission-body-static">
+                    <p class="mission-reserved-text">Currently plotting a course. New coordinates incoming soon, check back for the next launch.</p>
                 </div>
             </div>
 
-        </div>
+</div>
 
     </div>
 
